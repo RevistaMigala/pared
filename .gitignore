@@ -1,0 +1,9 @@
+#Node modules
+node_modules
+
+#DS_Store
+.DS_Store
+
+#Env files
+config/env.*
+!config/env.example
