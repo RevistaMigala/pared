@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya&family=Staatliches&display=swap');
+
+:root {
+  --rosa: #ff5050;
+  --gris: #cccccc;
+  --azul: #33cccc;
+}
+
+body {
+    font-family: 'Alegreya', serif;
+    color: var(--gris);
+    text-align: center;
+    background-color: white;
+}
+
+h1 {
+    font-family: 'Staatliches', sans-serif;
+    color: var(--rosa);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+div {
+    font-style: italic;
+    margin-bottom: 12px;
+}
+
+p.footer::first-letter {
+    font-variant: inherit;
+    initial-letter: inherit;
+    font-size: inherit;
+}
+
+.footer {
+    font-style: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    margin-left: -150px;
+    width: 300px;
+    text-align: center;
+    background-color: white;
+    z-index: 2;
+}
+
+.footer a {
+    padding: 0;
+}
+
+a {
+    color: inherit;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+a:hover {
+    color: var(--azul);
+}
+
+img {
+    width: 200px;
+}
+
+input {
+    border: none;
+    border-bottom: solid 1px;
+    font-family: inherit;
+    font-style: italic;
+    font-size: 12px;
+}
+
+button {
+    border: none;
+    background: none;
+    font-family: inherit;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 12px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+button:hover {
+    cursor: pointer;
+    color: red;
+}
+
+button:focus, input:focus {
+    outline: none;
+}
