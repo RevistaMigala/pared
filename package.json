@@ -1,0 +1,36 @@
+{
+  "name": "pared",
+  "version": "1.0.0",
+  "description": "Web server for pared website",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "hbs": "^4.1.1",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "env-cmd": "^10.1.0",
+    "nodemon": "^1.19.4"
+  },
+  "scripts": {
+    "test": "exit 0",
+    "dev": "env-cmd -f ./config/env.local nodemon src/app.js -e js,hbs",
+    "start": "env-cmd -f ./config/env.local node src/app.js",
+    "deploy:prod": "git push heroku master"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RevistaMigala/pared.git"
+  },
+  "keywords": [
+    "pared",
+    "express",
+    "twitter"
+  ],
+  "author": "David Enriquez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RevistaMigala/pared/issues"
+  },
+  "homepage": "https://github.com/RevistaMigala/pared#readme"
+}
