@@ -6,7 +6,10 @@
   "dependencies": {
     "express": "^4.17.1",
     "hbs": "^4.1.1",
-    "request": "^2.88.0"
+    "mongoose": "^5.9.18",
+    "multer": "^1.4.2",
+    "request": "^2.88.0",
+    "validator": "^13.0.0"
   },
   "devDependencies": {
     "env-cmd": "^10.1.0",
@@ -14,6 +17,7 @@
   },
   "scripts": {
     "test": "exit 0",
+    "start_db": "chmod 755 ./local-db/start-db.sh && ./local-db/start-db.sh",
     "dev": "env-cmd -f ./config/env.local nodemon src/app.js -e js,hbs",
     "start": "node src/app.js",
     "deploy:prod": "git push heroku master"
