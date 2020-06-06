@@ -1,6 +1,10 @@
+const fs = require('fs')
 const path = require('path')
 const express = require('express')
 const hbs = require('hbs')
+const { upload, imageGallery } = require('./middleware/upload')
+const Submit = require('./models/submit')
+require('../db/mongoose')
 
 const app = express()
 const port = process.env.PORT || 3000
@@ -9,6 +13,7 @@ const partialsPath = path.join(__dirname, '../views/partials')
 
 // Setup view engine
 app.set('view engine', 'hbs')
+// app.use(express.urlencoded())
 hbs.registerPartials(partialsPath)
 
 // Setup directory for static files
@@ -29,7 +34,7 @@ const aboutValues =  {
 
 const submitValues =  {
     title: 'Submit',
-    description: 'Próximamente podrás proponer tu trabajo para exhibirlo un mes en la pared.',
+    description: fs.readFileSync('./templates/submit.txt').toString('utf-8'),
     name: 'Migala.mx',
     link: 'https://migala.mx',
 }
@@ -60,6 +65,36 @@ app.get('/about/*', (req, res) => {
 
 app.get('/submit', (req, res) => {
     res.render('submit', submitValues)
+})
+
+app.post('/submit', imageGallery, async (req, res) => {
+    const params = {
+        artist_name: req.body.artist_name,
+        project_name: req.body.project_name,
+        project_description: req.body.project_description,
+        artist_city: req.body.artist_city,
+        artist_age: req.body.artist_age,
+        contact_email: req.body.contact_email,
+        images_folder_url: req.body.images_folder_url,
+    }
+    const submit = new Submit(params)
+    await submit.save()
+    pageValues = {
+        title: 'Submit',
+        description: 'Recibimos tu solicitud correctamente. Pronto te contactaremos.',
+        name: 'Migala.mx',
+        link: 'https://migala.mx',
+    }
+    res.render('submit', pageValues)
+}, (error, req, res, next) => {
+    console.error(error)
+    pageValues = {
+        title: 'Submit',
+        error: 'Hubo un error al recibir tu solicitud, por favor intenta de nuevo',
+        name: 'Migala.mx',
+        link: 'https://migala.mx',
+    }
+    res.render('submit', pageValues)
 })
 
 app.get('/submit/*', (req, res) => {

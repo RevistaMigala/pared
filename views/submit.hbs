@@ -7,7 +7,20 @@
     </head>
     <body>
         {{>header}}
-        {{description}}
+        <p class="description">{{description}}</p>
+        <p class="error">{{error}}</p>
+        <form class="submit" action="/submit" method="post" enctype="multipart/form-data">
+            <p>Todos los campos son requeridos</p>
+            <input type="text" name="artist_name" placeholder="Nombre del artista" required>
+            <input type="text" name="project_name" placeholder="Nombre del proyecto" required>
+            <input type="email" name="contact_email" placeholder="Email de contacto" required>
+            <input type="text" name="artist_age" placeholder="Edad del artista" required>
+            <input type="text" name="artist_city" placeholder="Ciudad del artista" required>
+            <textarea name="project_description" placeholder="Descripción del proyecto" rows="2" cols="40" required></textarea>
+            <p>Adjunta la url de una carpeta donde podamos ver una muestra de imágenes para exponer.</p>
+            <input type="text" name="images_folder_url" placeholder="Url de carpeta de imágenes" required>
+            <input type="submit" value="Enviar">
+        </form>
         {{>footer}}
     </body>
 </html>
