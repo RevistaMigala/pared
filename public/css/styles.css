@@ -89,18 +89,18 @@ input, textarea {
   display: block;
   width: 100%;
   margin: 5% 0;
+  border-radius: 0;
+  outline: none;
+  background: none;
 }
 
-input[type=submit]:hover {
-  background-color: var(--rosa);
-  color: white;
+input[type=submit]:hover, input[type=submit]:focus {
+  color: var(--rosa);
   cursor: pointer;
+  background: none;
+  outline: none;
 }
 
 input[type=text]:focus, textarea:focus {
   border-bottom: solid 1px var(--azul);
-}
-
-button:focus, input:focus {
-  outline: none;
 }
