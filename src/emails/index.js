@@ -5,7 +5,7 @@ const sendgridApiKey = process.env.SENDGRID_API_KEY
 
 sgMail.setApiKey(sendgridApiKey)
 
-const submitTemplate = fs.readFileSync('./src/emails/templates/submit.txt')
+const submitTemplate = fs.readFileSync('./src/copies/submitEmail.txt')
     .toString('utf-8')
 
 const sendSubmitEmail = (submit) => {

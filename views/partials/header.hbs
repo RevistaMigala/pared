@@ -1,6 +1,11 @@
 <h1>{{title}}</h1>
+<select class="select" name="language" id="language">
+    <option value="{{langDefault}}">{{langDefault}} ‣</option>
+    <option value="{{langOptionA}}">{{langOptionA}} ‣</option>
+</select>
+
 <div>
-    <a href="/">Pared</a>
-    <a href="/submit">Submit</a>
-    <a href="/about">About</a>
+    <a href="/?lang={{langDefault}}">Pared</a>
+    <a href="/submit?lang={{langDefault}}">{{submit}}</a>
+    <a href="/about?lang={{langDefault}}">{{about}}</a>
 </div>

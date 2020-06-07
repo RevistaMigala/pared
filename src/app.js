@@ -19,25 +19,12 @@ hbs.registerPartials(partialsPath)
 // Setup directory for static files
 app.use(express.static(public))
 
-const indexValues =  {
-    title: 'Pared',
-    description: 'Próximamente, pared.',
-    name: 'Migala.mx',
-    link: 'https://migala.mx',
-}
+const indexValues = require('./copies/indexPage')
+const aboutValues = require('./copies/aboutPage')
+const submitValues = require('./copies/submitPage')
+const submitValuesSuccess = require('./copies/submitPageSuccess')
+const submitValuesError = require('./copies/submitPageError')
 
-const aboutValues =  {
-    title: 'About',
-    name: 'Migala.mx',
-    link: 'https://migala.mx',
-}
-
-const submitValues =  {
-    title: 'Submit',
-    description: fs.readFileSync('./templates/submit.txt').toString('utf-8'),
-    name: 'Migala.mx',
-    link: 'https://migala.mx',
-}
 
 const errorValues = {
     title: '404 not found',
@@ -47,11 +34,11 @@ const errorValues = {
 }
 
 app.get('/', (req, res) => {
-    res.render('index', indexValues)
+    res.render('index', indexValues(req.query.lang))
 })
 
 app.get('/about', (req, res) => {
-    res.render('about', aboutValues)
+    res.render('about', aboutValues(req.query.lang))
 })
 
 app.get('/about/*', (req, res) => {
@@ -64,37 +51,20 @@ app.get('/about/*', (req, res) => {
 })
 
 app.get('/submit', (req, res) => {
-    res.render('submit', submitValues)
+    res.render('submit', submitValues(req.query.lang))
 })
 
 app.post('/submit', imageGallery, async (req, res) => {
-    const params = {
-        artist_name: req.body.artist_name,
-        project_name: req.body.project_name,
-        project_description: req.body.project_description,
-        artist_city: req.body.artist_city,
-        artist_age: req.body.artist_age,
-        contact_email: req.body.contact_email,
-        images_folder_url: req.body.images_folder_url,
+    try {
+        const submit = new Submit(req.body)
+        await submit.save()
+
+        res.render('submit', submitValuesSuccess(req.query.lang))
+    } catch(error) {
+        console.error(error)
+
+        res.render('submit', submitValuesError(req.query.lang))
     }
-    const submit = new Submit(params)
-    await submit.save()
-    pageValues = {
-        title: 'Submit',
-        description: 'Recibimos tu solicitud correctamente. Pronto te contactaremos.',
-        name: 'Migala.mx',
-        link: 'https://migala.mx',
-    }
-    res.render('submit', pageValues)
-}, (error, req, res, next) => {
-    console.error(error)
-    pageValues = {
-        title: 'Submit',
-        error: 'Hubo un error al recibir tu solicitud, por favor intenta de nuevo',
-        name: 'Migala.mx',
-        link: 'https://migala.mx',
-    }
-    res.render('submit', pageValues)
 })
 
 app.get('/submit/*', (req, res) => {
