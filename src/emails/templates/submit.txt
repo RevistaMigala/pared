@@ -1,0 +1,9 @@
+Recibimos una nueva solicitud en Pared.
+
+Artista: $artist_name
+Proyecto: $project_name
+Descripción: $project_description
+Edad: $artist_age
+Ciudad: $artist_city
+Correo de contacto: $contact_email
+Url de proyecto: $images_folder_url

@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 const validator = require('validator')
+const { sendSubmitEmail } = require('../emails')
 
 const schema = {
     artist_name: {
@@ -34,7 +35,6 @@ const schema = {
     },
     contact_email: {
         type: String,
-        unique: true,
         required: true,
         trim: true,
         lowercase: true,
@@ -54,6 +54,10 @@ const schema = {
 }
 
 const submitSchema = mongoose.Schema(schema, { timestamps: true })
+
+submitSchema.post('save', function (submit) {
+    sendSubmitEmail(submit)
+})
 
 const Submit = mongoose.model('Submit', submitSchema)
 
