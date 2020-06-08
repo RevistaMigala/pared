@@ -1,6 +1,6 @@
 const es = {
     title: 'Identidad/Mentira',
-    description: 'Entre la verdad, la mentira y el sujeto sólo está el discurso. En esta pieza, los invitamos a reflexionar sobre la influencia de la identidad en la aceptación del discurso. Aquí podemos leer las ideas libres de género, de raza, número de seguidores, en fin, prejuicios. Concepto de David Enríquez, dibujos de Melissa Paredes.',
+    description: 'Entre la verdad, la mentira y el sujeto sólo está el discurso. En esta pieza, los invitamos a reflexionar sobre la influencia de la identidad en la aceptación del discurso. Aquí podemos leer las ideas libres de género, de raza, número de seguidores, burbujas ideológicas, en fin, prejuicios. Se aborda distintos temas en esta conversación sin identidades, visita el sitio varias veces. Concepto de David Enríquez, dibujos de Melissa Paredes.',
     name: 'Creado por Migala.mx',
     link: 'https://migala.mx',
     submit: 'Postúlate',
@@ -8,12 +8,12 @@ const es = {
     exercise1: 'Identidad/Mentira',
     langDefault: 'es',
     langOptionA: 'en',
-    instructions: 'Pasa sobre las imágenes para ver qué se está pensando.'
+    instructions: 'Pasa sobre las imágenes para ver qué se está pensando.',
 }
 
 const en = {
     title: 'Identity/Lie',
-    description: 'Between truth, lie and being there is only the discourse. In this piece, we invite you to think about the influence of our identity in the acceptance of discourses. Here we can read some ideas free from his gender, race, followers, prejudice. Concept by David Enríquez, draws by Melissa Paredes.',
+    description: 'Between truth, lie and being there is only the discourse. In this piece, we invite you to think about the influence of our identity in the acceptance of discourses. Here we can read some ideas free from his gender, race, followers, thought bubbles, prejudice. Distinct topics are discussed in this unidentitied conversation, so try coming here again. Concept by David Enríquez, draws by Melissa Paredes.',
     name: 'Created by Migala.mx',
     link: 'https://migala.mx',
     submit: 'Submit',
@@ -21,7 +21,7 @@ const en = {
     exercise1: 'Identity/Lie',
     langDefault: 'en',
     langOptionA: 'es',
-    instructions: 'Hover over the images to read what is being thought.'
+    instructions: 'Hover over the images to read what is being thought.',
 }
 
 const LANGUAGES = { es, en }

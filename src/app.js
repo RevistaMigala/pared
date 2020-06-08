@@ -82,7 +82,7 @@ app.get('/exercise-1', async (req, res) => {
 
     try {
         const twits = await twitter.getTwits(req.query.lang)
-        const poems = twits.statuses.map((status) => status.text.replace(/\n/g, '/ '))
+        const poems = twits.statuses.map((status) => status.full_text.replace(/\n/g, '/ '))
         res.render('exercise-1', exercise1Values(req.query.lang, poems))
     } catch (error) {
         console.error(error)
