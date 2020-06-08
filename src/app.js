@@ -4,6 +4,7 @@ const express = require('express')
 const hbs = require('hbs')
 const { upload, imageGallery } = require('./middleware/upload')
 const Submit = require('./models/submit')
+const { TwitterClient } = require('./utils/twitter_client')
 require('../db/mongoose')
 
 const app = express()
@@ -24,6 +25,7 @@ const aboutValues = require('./copies/aboutPage')
 const submitValues = require('./copies/submitPage')
 const submitValuesSuccess = require('./copies/submitPageSuccess')
 const submitValuesError = require('./copies/submitPageError')
+const exercise1Values = require('./copies/exercise1Page')
 
 
 const errorValues = {
@@ -73,6 +75,18 @@ app.get('/submit/*', (req, res) => {
 
     res.render('404', helpErrorValues)
     console.log('Requested', req._parsedOriginalUrl.pathname)
+})
+
+app.get('/exercise-1', async (req, res) => {
+    const twitter = new TwitterClient()
+
+    try {
+        const twits = await twitter.getTwits(req.query.lang)
+        const poems = twits.statuses.map((status) => status.text.replace(/\n/g, '/ '))
+        res.render('exercise-1', exercise1Values(req.query.lang, poems))
+    } catch (error) {
+        console.error(error)
+    }
 })
 
 app.get('*', (req, res) => {

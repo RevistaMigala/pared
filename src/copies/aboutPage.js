@@ -1,21 +1,23 @@
 const es = {
     title: 'Acerca de',
-    name: 'Migala.mx',
+    name: 'Creado por Migala.mx',
     description: 'Pared, espacio de exposiciones virtuales.',
     link: 'https://migala.mx',
     submit: 'Postúlate',
     about: 'Acerca de',
+    exercise1: 'Identidad/Mentira',
     langDefault: 'es',
     langOptionA: 'en',
 }
 
 const en = {
     title: 'About',
-    name: 'Migala.mx',
+    name: 'Created by Migala.mx',
     description: 'Pared, space for virtual expositions.',
     link: 'https://migala.mx',
     submit: 'Submit',
     about: 'About',
+    exercise1: 'Identity/Lie',
     langDefault: 'en',
     langOptionA: 'es',
 }

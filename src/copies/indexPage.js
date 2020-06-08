@@ -1,23 +1,25 @@
 const es = {
     title: 'Pared',
     description: 'Próximamente, Pared.',
-    name: 'Migala.mx',
+    name: 'Creado por Migala.mx',
     link: 'https://migala.mx',
     submit: 'Postúlate',
     about: 'Acerca de',
     langDefault: 'es',
     langOptionA: 'en',
+    exercise1: 'Identidad/Mentira',
 }
 
 const en = {
     title: 'Pared',
     description: 'Coming soon, Pared.',
-    name: 'Migala.mx',
+    name: 'Created by Migala.mx',
     link: 'https://migala.mx',
     submit: 'Submit',
     about: 'About',
     langDefault: 'en',
     langOptionA: 'es',
+    exercise1: 'Identity/Lie',
 }
 
 const LANGUAGES = { es, en }

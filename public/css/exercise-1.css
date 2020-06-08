@@ -1,0 +1,183 @@
+
+.exercise-1 {
+  position: relative;
+  width: 100%;
+  height: 60vw;
+}
+
+div.exercise-1 > img {
+  height: 90%;
+  width: auto;
+  position: absolute;
+  mix-blend-mode: hard-light;
+}
+
+div.exercise-1 > img:hover {
+  opacity: 100%;
+}
+
+div.exercise-1 > p {
+  display: none;
+  position: absolute;
+  top: 5%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  mix-blend-mode: difference;
+  color: var(--rosa);
+}
+
+.exercise-1-2 {
+  left: 0;
+  top: 4%;
+  opacity: 50%;
+}
+
+.exercise-1-3 {
+  height: 95% !important;
+  left: 10%;
+  bottom: 2%;
+  opacity: 50%;
+}
+
+.exercise-1-4 {
+  left: 11%;
+  bottom: 3%;
+  height: 70% !important;
+  opacity: 70%;
+}
+
+.exercise-1-7 {
+  left: 19%;
+  bottom: 5%;
+  height: 73% !important;
+  opacity: 50%;
+}
+
+.exercise-1-6 {
+  left: 32%;
+  bottom: 0%;
+  height: 64% !important;
+  opacity: 85%;
+}
+
+.exercise-1-8 {
+  left: 26%;
+  bottom: 7%;
+  height: 71% !important;
+  opacity: 50%;
+}
+
+.exercise-1-9 {
+  left: 32%;
+  bottom: 4%;
+  height: 72% !important;
+  opacity: 35%;
+}
+
+.exercise-1-10 {
+  left: 31%;
+  bottom: 11%;
+  opacity: 40%;
+  height: 68% !important;
+}
+
+.exercise-1-11 {
+  right: 40%;
+  bottom: 10%;
+  opacity: 40%;
+  height: 65% !important;
+}
+
+.exercise-1-12 {
+  left: 55%;
+  bottom: 5%;
+  opacity: 65%%;
+  height: 72% !important;
+}
+
+.exercise-1-13 {
+  right: 23%;
+  bottom: 12%;
+  opacity: 50%;
+  height: 63% !important;
+}
+
+.exercise-1-14 {
+  right: 13%;
+  bottom: 5%;
+  opacity: 85%;
+  height: 78% !important;
+}
+
+.exercise-1-15 {
+  right: 9%;
+  bottom: 6%;
+  opacity: 35%;
+  height: 69% !important;
+}
+
+.exercise-1-16 {
+  right: 0%;
+  bottom: 9%;
+  opacity: 65%;
+  height: 66% !important;
+}
+
+.exercise-1-2:hover ~ p.exercise-1-2-text {
+  display: block;
+}
+
+.exercise-1-3:hover ~ p.exercise-1-3-text {
+  display: block;
+}
+
+.exercise-1-4:hover ~ p.exercise-1-4-text {
+  display: block;
+}
+
+.exercise-1-6:hover ~ p.exercise-1-6-text {
+  display: block;
+}
+
+.exercise-1-7:hover ~ p.exercise-1-7-text {
+  display: block;
+}
+
+.exercise-1-8:hover ~ p.exercise-1-8-text {
+  display: block;
+}
+
+.exercise-1-9:hover ~ p.exercise-1-9-text {
+  display: block;
+}
+
+.exercise-1-10:hover ~ p.exercise-1-10-text {
+  display: block;
+}
+
+.exercise-1-11:hover ~ p.exercise-1-11-text {
+  display: block;
+}
+
+.exercise-1-12:hover ~ p.exercise-1-12-text {
+  display: block;
+}
+
+.exercise-1-13:hover ~ p.exercise-1-13-text {
+  display: block;
+}
+
+.exercise-1-14:hover ~ p.exercise-1-14-text {
+  display: block;
+}
+
+.exercise-1-15:hover ~ p.exercise-1-15-text {
+  display: block;
+}
+
+.exercise-1-16:hover ~ p.exercise-1-16-text {
+  display: block;
+}
