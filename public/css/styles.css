@@ -12,33 +12,38 @@ body {
   text-align: center;
   background-color: white;
   margin: 0 auto;
-  font-size: 1em;
   position: absolute;
   width: 80%;
   top: 0;
   right: 0;
   left: 0;
+  text-size-adjust: 200%;
+  -webkit-text-size-adjust: 200%;
 }
 
 h1 {
-  font-size: 2em;
   font-family: 'Staatliches', sans-serif;
   color: var(--rosa);
   text-transform: uppercase;
   letter-spacing: 2px;
+  text-size-adjust: 300%;
+  -webkit-text-size-adjust: 300%;
 }
 
 .select {
   position: absolute;
   top: 1.5em;
   right: -10%;
-  font-size: 1em;
   font-family: 'Staatliches', sans-serif;
   color: var(--azul);
   border-radius: 0;
   -moz-appearance: none;
 	-webkit-appearance: none;
   border: none;
+  font-size: 1.15em;
+  text-size-adjust: 200%;
+  -webkit-text-size-adjust: 200%;
+  background: none;
 }
 
 div {
