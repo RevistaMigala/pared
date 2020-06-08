@@ -3,6 +3,7 @@ const path = require('path')
 const express = require('express')
 const hbs = require('hbs')
 const { upload, imageGallery } = require('./middleware/upload')
+const validateLang = require('./middleware/validateLang')
 const Submit = require('./models/submit')
 const { TwitterClient } = require('./utils/twitter_client')
 require('../db/mongoose')
@@ -77,7 +78,7 @@ app.get('/submit/*', (req, res) => {
     console.log('Requested', req._parsedOriginalUrl.pathname)
 })
 
-app.get('/exercise-1', async (req, res) => {
+app.get('/exercise-1', validateLang, async (req, res) => {
     const twitter = new TwitterClient()
 
     try {
@@ -86,6 +87,7 @@ app.get('/exercise-1', async (req, res) => {
         res.render('exercise-1', exercise1Values(req.query.lang, poems))
     } catch (error) {
         console.error(error)
+        res.render('index', indexValues('es'))
     }
 })
 
