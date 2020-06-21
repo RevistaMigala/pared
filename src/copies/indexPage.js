@@ -1,4 +1,5 @@
 const es = {
+    GATag: process.env.GA_TAG,
     title: 'Pared',
     description: 'Próximamente, Pared.',
     name: 'Creado por Migala.mx',
@@ -11,6 +12,7 @@ const es = {
 }
 
 const en = {
+    GATag: process.env.GA_TAG,
     title: 'Pared',
     description: 'Coming soon, Pared.',
     name: 'Created by Migala.mx',

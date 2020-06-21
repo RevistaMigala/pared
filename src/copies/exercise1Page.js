@@ -1,4 +1,5 @@
 const es = {
+    GATag: process.env.GA_TAG,
     title: 'Identidad/Mentira',
     description: 'Entre la verdad, la mentira y el sujeto sólo está el discurso. En esta pieza, los invitamos a reflexionar sobre la influencia de la identidad en la aceptación del discurso. Aquí podemos leer las ideas libres de género, de raza, número de seguidores, burbujas ideológicas, en fin, prejuicios. Se aborda distintos temas en esta conversación sin identidades, visita el sitio varias veces. Concepto de David Enríquez, dibujos de Melissa Paredes.',
     name: 'Creado por Migala.mx',
@@ -12,6 +13,7 @@ const es = {
 }
 
 const en = {
+    GATag: process.env.GA_TAG,
     title: 'Identity/Lie',
     description: 'Between truth, lie and being there is only the discourse. In this piece, we invite you to think about the influence of our identity in the acceptance of discourses. Here we can read some ideas free from his gender, race, followers, thought bubbles, prejudice. Distinct topics are discussed in this unidentitied conversation, so try coming here again. Concept by David Enríquez, draws by Melissa Paredes.',
     name: 'Created by Migala.mx',

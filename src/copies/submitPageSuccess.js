@@ -1,4 +1,5 @@
 const es = {
+    GATag: process.env.GA_TAG,
     title: 'Postúlate',
     description: 'Recibimos tu solicitud correctamente. Pronto te contactaremos.',
     name: 'Creado por Migala.mx',
@@ -21,6 +22,7 @@ const es = {
 }
 
 const en = {
+    GATag: process.env.GA_TAG,
     description: 'Your submit was successfully received. We will contact you soon.',
     title: 'Submit',
     name: 'Created by Migala.mx',

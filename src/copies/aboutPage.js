@@ -1,6 +1,7 @@
 const fs = require('fs')
 
 const es = {
+    GATag: process.env.GA_TAG,
     title: 'Acerca de',
     name: 'Creado por Migala.mx',
     description: fs.readFileSync('./src/copies/aboutEs.txt').toString('utf-8'),
@@ -13,6 +14,7 @@ const es = {
 }
 
 const en = {
+    GATag: process.env.GA_TAG,
     title: 'About',
     name: 'Created by Migala.mx',
     description: fs.readFileSync('./src/copies/aboutEn.txt').toString('utf-8'),

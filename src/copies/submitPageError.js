@@ -1,4 +1,5 @@
 const es = {
+    GATag: process.env.GA_TAG,
     description: 'Hubo un error al recibir tu solicitud. Por favor intenta de nuevo después.',
     title: 'Postúlate',
     name: 'Creado por Migala.mx',
@@ -21,6 +22,7 @@ const es = {
 }
 
 const en = {
+    GATag: process.env.GA_TAG,
     description: 'There was an error storing your submit. Please try again later.',
     title: 'Submit',
     name: 'Created by Migala.mx',

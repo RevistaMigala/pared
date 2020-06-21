@@ -1,4 +1,5 @@
 const es = {
+    GATag: process.env.GA_TAG,
     title: 'Postúlate',
     description: 'Postula tu trabajo para exponerlo en Pared. Llena el siguiente formulario. Presenta un proyecto pensado específicamente para el sitio. Evaluaremos tu propuesta y nos pondremos en contacto contigo.',
     name: 'Creado por Migala.mx',
@@ -21,6 +22,7 @@ const es = {
 }
 
 const en = {
+    GATag: process.env.GA_TAG,
     title: 'Submit',
     description: 'Submit your work to show it in Pared. Fill the next form. Submit a project developed especifically for this site. We will evaluate your project and contact you soon.',
     name: 'Created by Migala.mx',
