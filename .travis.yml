@@ -8,4 +8,5 @@ branches:
   only:
   - master
 before_deploy:
-- "./travis/config.sh"
+  - "echo 'Starting deploy'"
+  - ./travis/config.sh
