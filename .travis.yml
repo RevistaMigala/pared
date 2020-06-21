@@ -3,16 +3,14 @@ node_js:
 - 12
 install:
 - npm install
-before_deploy:
-- gem install travis
-- chmod -R +x ./travis
-- "./travis/config.sh"
 deploy:
   provider: heroku
   app:
-    master: $APP_NAME
+    master: floating-eyrie-02868
   on:
     repo: RevistaMigala/pared
+  api_key:
+    secure: m4t+5KdL8zAlBjTejgNJyEHXRKfVK43f9v1dDoiEG4/Pv6Ui6w1lCpgsConESA0EgyQ9lGVMSBlKhDT7tpTGX550G3FKFZe/0MFXzRXLKR0PgVZApfaVuSTOOLpGuMsYcWbLYhix4WscH5Tz5c89aQ3TXR80ETwYGLAYU+QTlVPyMUWGEJp2RvSTdmkr9P7ISXs+HbZt6C3GluGdIRnITNJ9m5hjw6r3x32VdJJible1bJOU+vIYjdJA+4oU4PFfycyzAgWS/cedx4AHowQWAYkDlTogxjX5GWKiXZX6ulSPWfL87+LZBJaSH3mdnwYgRN4UOakJHHw+MV3W2KAn2BfJHDUQKf1cqOmc772wpBSWGrzeA/v438UmGAIjRpg2He+9d7hwasz3vMJ+vPgmiJqMYpuBYPYCSihMk7jSWthcRSatZ7dahk2CZuHMPa7dQHpnY2GNHizdxG4StSbVBEPXp4almqK9huEbPY+TNF+BTbM3aJYKuLtTn5/UB7EDKExZgbuZzMtWBj4GvashWwjRaIJaYZxsUadSDrJkdlqFP1rp0ajI5cyfAn/R2iK2deX482UEYYaa6b5SrtHo+mAeoW8VjvJdhMjbtXW+K3w//BFoxUU3TNRRF3CET3OhZnv/YO7vQz5lu7+x81RpIAByJR0drUrjCYtzidtHKIg=
 branches:
   only:
   - master
