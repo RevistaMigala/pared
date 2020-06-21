@@ -1,3 +1,12 @@
+language: node_js
+node_js:
+  - 12
+install:
+  - npm install
+before_deploy:
+  - npm install serverless -g
+  - chmod -R +x ./travis
+  - ./travis/config.sh
 deploy:
   provider: heroku
   app:
@@ -7,6 +16,3 @@ deploy:
 branches:
   only:
   - master
-before_deploy:
-  - "echo 'Starting deploy'"
-  - ./travis/config.sh
