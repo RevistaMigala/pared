@@ -1,0 +1,11 @@
+deploy:
+  provider: heroku
+  app:
+    master: floating-eyrie-02868
+  on:
+    repo: RevistaMigala/pared
+branches:
+  only:
+  - master
+before_deploy:
+- "./travis/config.sh"
