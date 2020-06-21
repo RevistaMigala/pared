@@ -51,10 +51,6 @@ div {
   margin-bottom: 12px;
 }
 
-.description {
-  margin: 5% 0;
-}
-
 p.footer::first-letter {
   font-variant: inherit;
   initial-letter: inherit;
@@ -126,4 +122,12 @@ input[type=submit]:hover, input[type=submit]:focus {
 
 input[type=text]:focus, textarea:focus {
   border-bottom: solid 1px var(--azul);
+}
+
+.description {
+  white-space: pre-wrap;
+  width: 80%;
+  margin: 3em auto;
+  text-align: justify;
+  text-align-last: center;
 }

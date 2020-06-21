@@ -1,7 +1,9 @@
+const fs = require('fs')
+
 const es = {
     title: 'Acerca de',
     name: 'Creado por Migala.mx',
-    description: 'Pared, espacio de exposiciones virtuales.',
+    description: fs.readFileSync('./src/copies/aboutEs.txt').toString('utf-8'),
     link: 'https://migala.mx',
     submit: 'Postúlate',
     about: 'Acerca de',
