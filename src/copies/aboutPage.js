@@ -15,7 +15,7 @@ const es = {
 const en = {
     title: 'About',
     name: 'Created by Migala.mx',
-    description: 'Pared, space for virtual expositions.',
+    description: fs.readFileSync('./src/copies/aboutEn.txt').toString('utf-8'),
     link: 'https://migala.mx',
     submit: 'Submit',
     about: 'About',
