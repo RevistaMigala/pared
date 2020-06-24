@@ -7,3 +7,7 @@ node_modules
 #Env files
 config/env.*
 !config/env.example
+
+#Local mongo setup
+local-db/*
+!local-db/start-db.sh.example
