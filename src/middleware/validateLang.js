@@ -1,6 +1,7 @@
 const allowedLangs = [
     'es',
-    'en'
+    'en',
+    'fr'
 ]
 
 module.exports = (req, res, next) => {

@@ -1,7 +1,7 @@
 #!/bin/bash
 
-export MONGODB_FOLDER=
-export MONGODB_DATA_FOLDER=
+export MONGODB_FOLDER=mongobongo
+export MONGODB_DATA_FOLDER=mongo-data
 
 echo $MONGODB_FOLDER
 echo $MONGODB_FOLDER

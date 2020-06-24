@@ -1,30 +1,25 @@
+const {
+  es: esGlobals,
+  en: enGlobals,
+  fr: frGlobals
+} = require('./globals')
+
 const es = {
-    GATag: process.env.GA_TAG,
-    title: 'Pared',
+    ...esGlobals,
     description: 'Próximamente, Pared.',
-    name: 'Creado por Migala.mx',
-    link: 'https://migala.mx',
-    submit: 'Postúlate',
-    about: 'Acerca de',
-    langDefault: 'es',
-    langOptionA: 'en',
-    exercise1: 'Identidad/Mentira',
 }
 
 const en = {
-    GATag: process.env.GA_TAG,
-    title: 'Pared',
+    ...enGlobals,
     description: 'Coming soon, Pared.',
-    name: 'Created by Migala.mx',
-    link: 'https://migala.mx',
-    submit: 'Submit',
-    about: 'About',
-    langDefault: 'en',
-    langOptionA: 'es',
-    exercise1: 'Identity/Lie',
 }
 
-const LANGUAGES = { es, en }
+const fr = {
+    ...frGlobals,
+    description: 'Bientôt, Pared.',
+}
+
+const LANGUAGES = { es, en, fr }
 
 module.exports = (language) => {
   const lang = LANGUAGES[language]

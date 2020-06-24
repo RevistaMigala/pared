@@ -26,10 +26,19 @@ module.exports.TwitterClient = class TwitterClient {
             'identidad',
             '#decima OR # décima',
             'poesía OR poesia',
-        ]
+        ],
+        this.frQuery = [
+            'genre',
+            'genre ?',
+            '#haiku',
+            'identite',
+            '#sonnet',
+            'poesie',
+        ],
         this.queryMap = {
             es: this.esQuery,
             en: this.enQuery,
+            fr: this.frQuery,
         }
     }
 
