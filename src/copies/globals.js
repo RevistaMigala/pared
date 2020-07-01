@@ -1,7 +1,7 @@
 const es = {
     GATag: process.env.GA_TAG,
     title: 'Pared',
-    name: 'Crado por Migala.mx',
+    name: 'Creado por Migala.mx',
     link: 'https://migala.mx',
     submit: 'Postúlate',
     about: 'Acerca de',
