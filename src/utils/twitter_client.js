@@ -17,7 +17,7 @@ module.exports.TwitterClient = class TwitterClient {
             '#haiku',
             'identity',
             'poetry',
-            '#sonet',
+            '#sonnet',
         ],
         this.esQuery = [
             'genero',
