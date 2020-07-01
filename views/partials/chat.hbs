@@ -1,0 +1,13 @@
+<link rel="stylesheet" href="/css/chat.css">
+<div class="chat">
+  <div class="messages">
+    <li>{{startMessage}}</li>
+  </div>
+  <form class="author">
+    <input type="text" id="username" name="username" placeholder="{{username}}" required>
+    <input type="text" id="message" name="message" placeholder="{{message}}" required>
+    <input type="submit" id="chatsubmit" name="" value="+">
+  </form>
+</div>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/chat.js"></script>
