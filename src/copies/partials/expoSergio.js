@@ -15,7 +15,7 @@ module.exports.en = {
     rotate: 'Rotate',
     username: 'User name',
     message: 'Message',
-    startMessage: 'Bienvenido al chat. Mientras dure la transmisión en vivo, puedes preguntar o comentar lo que desees al artista o a los curadores.'
+    startMessage: 'Welcome to the chat. Meanwhile the transmission is online you can make any questions or comments to artist or curators.'
 
 }
 
