@@ -1,22 +1,28 @@
+const fs = require('fs')
 const {
   es: esGlobals,
   en: enGlobals,
   fr: frGlobals
 } = require('./globals')
+const {
+  es: esExpo,
+  en: enExpo,
+  fr: frExpo
+} = require('./partials/expoSergio')
 
 const es = {
     ...esGlobals,
-    description: 'Próximamente, Pared.',
+    ...esExpo,
 }
 
 const en = {
     ...enGlobals,
-    description: 'Coming soon, Pared.',
+    ...enExpo,
 }
 
 const fr = {
     ...frGlobals,
-    description: 'Bientôt, Pared.',
+    ...frExpo,
 }
 
 const LANGUAGES = { es, en, fr }

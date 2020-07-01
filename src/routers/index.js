@@ -4,6 +4,7 @@ const express = require('express')
 const { upload, imageGallery } = require('../middleware/upload')
 const validateLang = require('../middleware/validateLang')
 const Submit = require('../models/submit')
+const Message = require('../models/message')
 const { TwitterClient } = require('../utils/twitter_client')
 require('../../db/mongoose')
 
@@ -14,6 +15,33 @@ const copies = require('../copies')
 router.get('/', (req, res) => {
     res.render('index', copies.indexValues(req.query.lang))
 })
+
+router.post('/message', async (req, res) => {
+    console.log('body', req.body)
+    try {
+        const message = new Message(req.body)
+        await message.save()
+
+        res.sendStatus(201)
+    } catch(error) {
+        console.error(error)
+
+        res.sendStatus(500)
+    }
+})
+
+router.get('/message', async (req, res) => {
+    try {
+        const messages = await Message.find()
+        res.status(200)
+        res.send(JSON.stringify(messages))
+    } catch(error) {
+        console.error(error)
+
+        res.sendStatus(500)
+    }
+})
+
 
 router.get('/about', (req, res) => {
     res.render('about', copies.aboutValues(req.query.lang))

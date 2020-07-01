@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Alegreya&family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300&family=Alegreya:wght@400;700&family=Staatliches&display=swap');
 
 :root {
   --rosa: #ff5050;
@@ -81,11 +81,6 @@ a {
 a:hover {
   color: var(--azul);
 }
-
-img {
-  width: 200px;
-}
-
 
 form {
   margin: 0 20%;
