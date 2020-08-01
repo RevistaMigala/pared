@@ -1,7 +1,7 @@
 const fs = require('fs')
 
 module.exports.es = {
-    expoDescription: fs.readFileSync('./src/copies/expoDescriptionEs.txt').toString('utf-8'),
+    expoDescription: fs.readFileSync('./src/copies/partials/expoSergioDescriptionEs.txt').toString('utf-8'),
     zoom: 'Acercarse',
     rotate: 'Recorrer',
     username: 'Nombre de usuario',
@@ -10,7 +10,7 @@ module.exports.es = {
 }
 
 module.exports.en = {
-    expoDescription: fs.readFileSync('./src/copies/expoDescriptionEn.txt').toString('utf-8'),
+    expoDescription: fs.readFileSync('./src/copies/partials/expoSergioDescriptionEn.txt').toString('utf-8'),
     zoom: 'Zoom',
     rotate: 'Rotate',
     username: 'User name',
@@ -20,7 +20,7 @@ module.exports.en = {
 }
 
 module.exports.fr = {
-    expoDescription: fs.readFileSync('./src/copies/expoDescriptionEn.txt').toString('utf-8'),
+    expoDescription: fs.readFileSync('./src/copies/partials/expoSergioDescriptionEn.txt').toString('utf-8'),
     zoom: 'Se rapprocher',
     rotate: 'Tourner autour',
     username: 'Nom',

@@ -9,6 +9,7 @@ const es = {
     langOptionA: 'fr',
     langOptionB: 'en',
     exercise1: 'Identidad/Mentira',
+    expos: 'Expos anteriores',
 }
 
 const en = {
@@ -22,6 +23,7 @@ const en = {
     langOptionA: 'es',
     langOptionB: 'fr',
     exercise1: 'Identity/Lie',
+    expos: 'Previous exhibitions',
 }
 
 const fr = {
@@ -35,6 +37,7 @@ const fr = {
     langOptionA: 'es',
     langOptionB: 'en',
     exercise1: 'Identité/Mensonge',
+    expos: 'Expositions antérieures',
 }
 
 module.exports = { es, en, fr }

@@ -1,0 +1,26 @@
+.artist-name {
+  font-family: "Staatliches", sans-serif;
+  color: var(--rosa);
+  text-align: left;
+  letter-spacing: 1px;
+}
+
+.expos {
+  font-style: normal;
+  width: 70%;
+  margin: 3rem auto 0 auto;
+}
+
+.expo-title {
+  text-align: left;
+}
+
+nav li {
+  display: inline;
+  border-left: solid 1px var(--rosa);
+  padding: 0 1rem;
+}
+
+.expo-link {
+  text-decoration: none;
+}

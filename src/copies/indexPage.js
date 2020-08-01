@@ -8,7 +8,7 @@ const {
   es: esExpo,
   en: enExpo,
   fr: frExpo
-} = require('./partials/expoSergio')
+} = require('./partials/expoAdrianGonzalez')
 
 const es = {
     ...esGlobals,

@@ -1,0 +1,173 @@
+@media (orientation: portrait) {
+    .piece-2-container {
+        max-height: 100vw;
+    }
+}
+
+.container {
+  width: auto;
+  height: 1000px;
+  perspective: 1000px;
+}
+
+.piece-1 {
+  text-align: left;
+  width: 80%;
+  margin: 3rem auto;
+  position: relative;
+  z-index: 2;
+  height: 70vh;
+}
+
+.title-group {
+  font-style: normal;
+  margin-top: 3em;
+}
+
+.expo-title {
+  margin: 0 0 0 10vw;
+  line-height: .8em;
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  width: 70%;
+  min-width: 300px;
+}
+
+.expo-title.es {
+  text-align: left;
+}
+
+.expo-title.en {
+  text-align: right;
+  color: var(--gris);
+}
+
+.expo-author, .expo-city {
+  margin-top: 1.6em;
+  margin-left: 10vw;
+  margin-right: auto;
+  min-width: 300px;
+  width: 50%;
+  text-align: justify;
+  font-weight: bold;
+}
+
+.expo-description {
+  margin-top: 1.6em;
+  margin-left: 10vw;
+  margin-bottom: 3em;
+  text-align: justify;
+  width: 50%;
+  min-width: 300px;
+}
+
+.info-contaner p {
+  color: white;
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: .6em;
+  font-style: normal;
+  letter-spacing: 2px;
+  text-align: left;
+  margin: 0;
+}
+
+.info-contaner {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: var(--azul);
+  min-width: 200px;
+  padding: .8em;
+  width: 25vw;
+  z-index: 5;
+}
+
+.info-contaner p {
+  text-align: right;
+}
+
+.piece-2-container {
+  position: relative;
+  width: auto;
+  height: 100vh;
+  margin-bottom: 3em;
+}
+
+.piece-2 {
+  position: relative;
+  margin: auto;
+}
+
+div.piece-2-container > img {
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  top: 0;
+  margin: auto;
+  max-height: 80%;
+}
+
+.links {
+  width: 80%;
+  margin: 3em auto;
+}
+
+.link {
+  width: 200px;
+  height: 300px;
+  background-color: var(--rosa);
+  border-left: solid 2px var(--azul);
+  padding: .8em;
+  display: inline-block;
+  margin: .8em;
+  box-shadow: 10px 5px 0px var(--gris);
+  vertical-align: bottom;
+}
+
+.link-image {
+  height: 60%;
+  display: block;
+}
+
+.link-info {
+  height: 40%;
+  display: block;
+  padding: .8em;
+}
+
+.link img {
+  max-width: 90%;
+  max-height: 100%;
+  height: auto;
+}
+
+.link p{
+  color: white;
+  font-style: normal;
+  font-family: 'Alegreya Sans', sans-serif;
+  margin: 0;
+}
+
+.link-author, .link-title, .link-lang {
+  font-size: .8em;
+}
+
+.videoconference {
+  width: 70%;
+  margin-left: 10vw;
+  text-align: left;
+}
+
+.videoconference > iframe {
+  width: 100%;
+  min-width: 300px;
+  height: 30vw;
+  min-height: 200px;
+}
+
+.piece-1 > iframe {
+  width: 100%;
+  min-width: 300px;
+  height: 30vw;
+  min-height: 200px;
+}

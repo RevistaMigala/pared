@@ -14,6 +14,12 @@ const schema = {
         trim: true,
         updateAllowed: true,
     },
+    expo: {
+        type: String,
+        required: true,
+        trim: true,
+        updateAllowed: true,
+    },
 }
 
 const messageSchema = mongoose.Schema(schema, { timestamps: true })

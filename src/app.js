@@ -12,15 +12,14 @@ const server = http.createServer(app)
 const port = process.env.PORT || 3000
 const public = path.join(__dirname, '../public')
 const partialsPath = path.join(__dirname, '../views/partials')
-//
-// const io = socketio(server)
 
+const io = socketio(server)
 
-// io.on('connection', (socket) => {
-//     socket.on('increment', (message) => {
-//         io.emit('broadcast', message)
-//     })
-// })
+io.on('connection', (socket) => {
+    socket.on('increment', (message) => {
+        io.emit('broadcast', message)
+    })
+})
 
 // Setup view engine
 app.set('view engine', 'hbs')

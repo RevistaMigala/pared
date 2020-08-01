@@ -1,6 +1,8 @@
 const socket = io()
 const fetchMessages = () => {
-    fetch('/message')
+    const expo = document.querySelector('#expoName').value || ''
+    const url = `/message?expo=${expo}`
+    fetch(url)
         .then(res => res.json())
         .then(publishMessages)
         .catch(error => console.error('Error:', error))
@@ -25,12 +27,13 @@ form.addEventListener('submit', async (event) => {
     event.preventDefault()
     const username = document.querySelector('#username').value
     const message = document.querySelector('#message').value
+    const expo = document.querySelector('#expoName').value
 
     socket.emit('increment', `${username}: ${message}`)
 
     document.querySelector('#message').value = ''
 
-    await saveMessage({ username, message })
+    await saveMessage({ username, message, expo })
 })
 
 const saveMessage = async (message) => {

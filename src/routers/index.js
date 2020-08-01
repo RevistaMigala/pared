@@ -32,7 +32,7 @@ router.post('/message', async (req, res) => {
 
 router.get('/message', async (req, res) => {
     try {
-        const messages = await Message.find()
+        const messages = await Message.find({ expo: req.query.expo })
         res.status(200)
         res.send(JSON.stringify(messages))
     } catch(error) {
@@ -92,6 +92,14 @@ router.get('/exercise-1', validateLang, async (req, res) => {
         console.error(error)
         res.render('index', copies.indexValues('es'))
     }
+})
+
+router.get('/expos', validateLang, async (req, res) => {
+    res.render('expos', copies.exposValues(req.query.lang))
+})
+
+router.get('/expos/sergiosuarez', validateLang, async (req, res) => {
+    res.render('sergioSuarez', copies.sergioSuarezValues(req.query.lang))
 })
 
 router.get('*', (req, res) => {

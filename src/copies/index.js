@@ -5,6 +5,8 @@ const submitValuesSuccess = require('./submitPageSuccess')
 const submitValuesError = require('./submitPageError')
 const exercise1Values = require('./exercise1Page')
 const errorValues = require('./errorValues')
+const exposValues = require('./exposPage')
+const sergioSuarezValues = require('./sergioSuarezPage')
 
 module.exports = {
     indexValues,
@@ -13,5 +15,7 @@ module.exports = {
     submitValuesSuccess,
     submitValuesError,
     exercise1Values,
+    exposValues,
+    sergioSuarezValues,
     errorValues,
 }
