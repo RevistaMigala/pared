@@ -7,6 +7,8 @@ const exercise1Values = require('./exercise1Page')
 const errorValues = require('./errorValues')
 const exposValues = require('./exposPage')
 const sergioSuarezValues = require('./sergioSuarezPage')
+const adrianGonzalezValues = require('./adrianGonzalezPage')
+const alejandraAguilarValues = require('./alejandraAguilarPage');
 
 module.exports = {
     indexValues,
@@ -17,5 +19,7 @@ module.exports = {
     exercise1Values,
     exposValues,
     sergioSuarezValues,
+    adrianGonzalezValues,
+    alejandraAguilarValues,
     errorValues,
 }

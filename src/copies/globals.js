@@ -10,6 +10,8 @@ const es = {
     langOptionB: 'en',
     exercise1: 'Identidad/Mentira',
     expos: 'Expos anteriores',
+    rotate: 'Girar',
+    zoom: 'Zoom',
 }
 
 const en = {
@@ -24,6 +26,8 @@ const en = {
     langOptionB: 'fr',
     exercise1: 'Identity/Lie',
     expos: 'Previous exhibitions',
+    rotate: 'Rotate',
+    zoom: 'Zoom',
 }
 
 const fr = {
@@ -38,6 +42,8 @@ const fr = {
     langOptionB: 'en',
     exercise1: 'Identité/Mensonge',
     expos: 'Expositions antérieures',
+    rotate: 'Rotate',
+    zoom: 'Zoom',
 }
 
 module.exports = { es, en, fr }
