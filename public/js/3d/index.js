@@ -75,7 +75,7 @@ function changeModel (model) {
 
 // Rotate model
 let rotator = document.querySelector('.sliderRotate')
-let rotationIndex = 1.6
+let rotationIndex = 1.8
 let touchIdentifier
 let xInitial
 
@@ -85,26 +85,26 @@ document.getElementById('canvas').addEventListener("touchmove", (event) => {
         : event.targetTouches[0].pageX
 
     touchIdentifier = event.targetTouches[0].identifier
-    const toRotate = (event.targetTouches[0].pageX - xInitial) * .025
+    const toRotate = (event.targetTouches[0].pageX - xInitial) * .0064
     xInitial = event.targetTouches[0].pageX
 
     const slider = document.querySelector('.sliderRotate')
-    if ((parseInt(slider.value) + toRotate) <= 0) {
+    if ((parseFloat(slider.value) + toRotate) <= 0) {
         slider.value = 0
-    } else if ((parseInt(slider.value) + toRotate) >= 6.4) {
+    } else if ((parseFloat(slider.value) + toRotate) >= 6.4) {
         slider.value = 6.4
     } else {
-        slider.value = parseInt(slider.value) + toRotate
+        slider.value = parseFloat(slider.value) + toRotate
     }
     rotationIndex = slider.value
 })
 
 // Render
 function animate() {
-	requestAnimationFrame( animate );
-  camera.position.set(0, 0, document.getElementById('zoom').value );
-  controls.update();
-  mesh.rotation.y = document.getElementById('rotation').value
-	renderer.render( scene, camera );
+  	requestAnimationFrame(animate)
+    camera.position.set(0, 0, document.getElementById("zoom").value)
+    controls.update()
+    mesh.rotation.y = document.getElementById('rotation').value
+  	renderer.render(scene, camera)
 }
-animate();
+animate()
