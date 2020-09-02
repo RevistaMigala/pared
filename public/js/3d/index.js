@@ -1,7 +1,9 @@
 // Setup
 document.getElementById('rotation').value = 1.8
 document.getElementById('zoom').value = 5
-const modelSelector = document.getElementById('model')
+const defaultModel = 'casa-bosque'
+const d = (new Date()).getHours()
+let currentDaytime = (d > 5 && d < 19) ? 'dia' : 'noche'
 const vw = (window.innerWidth > 800) ? 800 * .8 : window.innerWidth * .8
 const vh = vw
 
@@ -49,7 +51,7 @@ scene.add(light2)
 
 // Model
 let loader = new THREE.GLTFLoader();
-loader.load('./assets/expoAlejandra/3dmodels/casa-bosque-1-0.glb', handle_load);
+loader.load(`./assets/expoAlejandra/3dmodels/${defaultModel}-${currentDaytime}-1-0.glb`, handle_load);
 
 let mesh, mixer
 
@@ -66,11 +68,20 @@ controls.enabled = false
 
 // Change model
 function changeModel (model) {
-    const modelurl = './assets/expoAlejandra/3dmodels/' + model + '-1-0.glb'
+    const modelurl = `./assets/expoAlejandra/3dmodels/${model}-${currentDaytime}-1-0.glb`
+    document.getElementById('model').innerHTML = model
+    console.log(modelurl)
     scene.remove(mesh);
     mesh.geometry.dispose();
     mesh.material.dispose();
     loader.load(modelurl, handle_load)
+}
+
+// Change daytime
+function changeDaytime (daytime) {
+    currentDaytime = daytime
+    const currentModel = document.getElementById('model').innerHTML
+    changeModel(currentModel)
 }
 
 // Rotate model

@@ -25,10 +25,15 @@
       <input type="range" min="0" max="6.4" step="0.01" class="sliderRotate" id="rotation">
       <p>{{zoom}}</p>
       <input type="range" min="0" max="20" step="0.1" class="sliderZoom" id="zoom">
+      <p>
+          <span id="daytime-day" class="daytime-selector" onclick="changeDaytime('dia')">☀️</span>
+          <span id="daytime-night" class="daytime-selector" onclick="changeDaytime('noche')">🌙</span>
+      </p>
   </div>
   <div class="canvas-container">
       <canvas id="canvas"></canvas>
       <nav class="model-selector">
+          <script id="model">casa-bosque</script>
           <img
               id="casa-bosque-thumb"
               src="./assets/expoAlejandra/thumb1.png"

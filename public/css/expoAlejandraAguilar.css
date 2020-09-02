@@ -272,3 +272,7 @@ canvas {
   border-left: solid 2px var(--azul);
   cursor: pointer;
 }
+
+.daytime-selector {
+  cursor: pointer;
+}
