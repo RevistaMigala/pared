@@ -240,49 +240,10 @@
       <p>Alicia Ayanegui Web</p>
     </div>
   </div>
-  <!-- <div class="link">
-    <div class="link-image">
-      <a href="https://migala.mx/i-thought-i-build-a-house-but-i-was-only-threading-memory-en-pared-space/" target="_blank"><img src="/assets/expoAlejandra/links/link3.png" alt=""></a>
-    </div>
-    <div class="link-info">
-      <p>Ensayo · Essay</p>
-      <p>El trabajo de Alejanda Aguilar, por Naír Núñez</p>
-    </div>
-  </div> -->
 </div>
 <h1 class="expo-title es">Reconocimientos</h1>
 <h1 class="expo-title en">Acknowledges</h1>
 <p class="expo-description">Translations/traducción // Text review/revisión de textos<br>Gala Anaya Vázquez, Beatriz Marrodán</p>
+<script src="/js/backgroundDarken.js"></script>
 
-<script type="text/javascript">
-    const changeBackgroundColor = () => {
-        // Elements
-        const display = document.querySelector(".piece-2")
-        const body = document.querySelector('body')
-
-        // Positions
-        const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
-        const topOffset = vh - display.getBoundingClientRect().top
-        const bottomOffset = vh - display.getBoundingClientRect().bottom
-
-        // Results
-        const topOpacity = topOffset / (vh / 2)
-        const bottomOpacity = bottomOffset / (vh / 2)
-
-        if (topOpacity > 0 && topOpacity < 1) {
-            body.style["background-color"] = `rgba(0, 0, 0, ${topOpacity})`
-        }
-        if (topOpacity > 1) {
-            body.style["background-color"] = 'rgba(0, 0, 0, 1)'
-        }
-        if (bottomOpacity > 0 && bottomOpacity < 1) {
-            body.style["background-color"] = `rgba(0, 0, 0, ${1 - bottomOpacity})`
-        }
-        if (topOpacity < 0 || bottomOpacity > 1) {
-            body.style["background-color"] = 'rgba(0, 0, 0, 0)'
-        }
-    }
-
-    window.addEventListener('load', changeBackgroundColor)
-    window.addEventListener('scroll', changeBackgroundColor)
-</script>
+<script type="text/javascript"></script>
