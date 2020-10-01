@@ -8,7 +8,8 @@ const errorValues = require('./errorValues')
 const exposValues = require('./exposPage')
 const sergioSuarezValues = require('./sergioSuarezPage')
 const adrianGonzalezValues = require('./adrianGonzalezPage')
-const alejandraAguilarValues = require('./alejandraAguilarPage');
+const alejandraAguilarValues = require('./alejandraAguilarPage')
+const aliciaAyaneguiValues = require('./aliciaAyaneguiPage')
 
 module.exports = {
     indexValues,
