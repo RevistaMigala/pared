@@ -12,7 +12,7 @@
     actionContainer = document.querySelector('.action-container-hidden')
 
   // Config
-  let childrenCount = 13,
+  let childrenCount = 14,
     vw = (window.innerWidth) ? window.innerWidth : 800,
     vh = (window.innerHeight && window.innerHeight > vw) ? window.innerHeight * .6 : 800 * .8
 
@@ -117,40 +117,45 @@
       )
 
       removeLayer.addEventListener('click', () => {
-          if (childrenCount <= 1) {
-            return
-          }
-          childrenCount -= 1
-          if (childrenCount === 12) {
+          if (childrenCount === 14) {
             actionContainer.className = 'action-container'
             actionContainer.innerHTML = closeButton + map
             document.querySelector('#remove-action').addEventListener('click', () => {
                 actionContainer.className = 'action-container-hidden'
             })
           }
-          if (childrenCount === 11) {
+          if (childrenCount === 13) {
             actionContainer.className = 'action-container'
             actionContainer.innerHTML = closeButton + audio3
             document.querySelector('#remove-action').addEventListener('click', () => {
                 actionContainer.className = 'action-container-hidden'
             })
           }
-          if (childrenCount === 7) {
+          if (childrenCount === 9) {
             actionContainer.className = 'action-container'
             actionContainer.innerHTML = closeButton + audio2
             document.querySelector('#remove-action').addEventListener('click', () => {
                 actionContainer.className = 'action-container-hidden'
             })
           }
-          if (childrenCount === 6) {
+          if (childrenCount === 8) {
             actionContainer.className = 'action-container'
             actionContainer.innerHTML = closeButton + video
             document.querySelector('#remove-action').addEventListener('click', () => {
                 actionContainer.className = 'action-container-hidden'
             })
           }
-          if (childrenCount === 4) {
-            console.log('action twitter')
+          if (childrenCount === 6) {
+            fetch('/services/lina')
+                .then(response => response.json())
+                .then(data => {
+                  actionContainer.className = 'action-container'
+                  const html = `${closeButton}<br><br><p style="margin: auto; text-align: center; color: white">Twitter random:</p><p style="color: white; text-align: center; width: 60%; margin: auto;">${data}</p>`
+                  actionContainer.innerHTML = html
+                  document.querySelector('#remove-action').addEventListener('click', () => {
+                      actionContainer.className = 'action-container-hidden'
+                  })
+                })
           }
           if (childrenCount === 1) {
             actionContainer.className = 'action-container'
@@ -159,53 +164,18 @@
                 actionContainer.className = 'action-container-hidden'
             })
           }
+          if (childrenCount <= 1) {
+            return
+          }
+          childrenCount -= 1
           model.children = layers.slice(0, childrenCount)
       })
 
       addLayer.addEventListener('click', () => {
-          if (childrenCount >= 13) {
+          if (childrenCount >= 14) {
             return
           }
           childrenCount += 1
-          if (childrenCount === 13) {
-            actionContainer.className = 'action-container'
-            actionContainer.innerHTML = closeButton + map
-            document.querySelector('#remove-action').addEventListener('click', () => {
-                actionContainer.className = 'action-container-hidden'
-            })
-          }
-          if (childrenCount === 12) {
-            actionContainer.className = 'action-container'
-            actionContainer.innerHTML = closeButton + audio3
-            document.querySelector('#remove-action').addEventListener('click', () => {
-                actionContainer.className = 'action-container-hidden'
-            })
-          }
-          if (childrenCount === 8) {
-            actionContainer.className = 'action-container'
-            actionContainer.innerHTML = closeButton + audio2
-            document.querySelector('#remove-action').addEventListener('click', () => {
-                actionContainer.className = 'action-container-hidden'
-            })
-          }
-          if (childrenCount === 7) {
-            actionContainer.className = 'action-container'
-            actionContainer.innerHTML = closeButton + video
-            document.querySelector('#remove-action').addEventListener('click', () => {
-                actionContainer.className = 'action-container-hidden'
-            })
-          }
-          if (childrenCount === 5) {
-            console.log('action twitter')
-          }
-          if (childrenCount === 2) {
-            actionContainer.className = 'action-container'
-            actionContainer.innerHTML = closeButton + audio1
-            document.querySelector('#remove-action').addEventListener('click', () => {
-                actionContainer.className = 'action-container-hidden'
-            })
-          }
-
           model.children = layers.slice(0, childrenCount)
       })
 

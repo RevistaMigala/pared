@@ -9,7 +9,10 @@ module.exports.es = {
     startMessage: 'Bienvenido al chat. Mientras dure la transmisión en vivo, puedes preguntar o comentar lo que desees al artista o a los curadores.',
     addLayer: 'Agregar capa',
     removeLayer: 'Remover capa',
-    close: 'Cerrar',
+    warn1: 'Haz clic en los botones para quitar (-) o agregar capas (+).',
+    warn2: 'Usa tu mouse o mueve con tu dedo el modelo.',
+    warn3: 'Algunas capas tienen acciones adicionales al removerlas, descúbrelas.',
+    warn4: 'El tiempo de carga del modelo 3d puede ser de hasta 2 minutos, tu paciencia será recompensada.',
 }
 
 module.exports.en = {
@@ -19,7 +22,10 @@ module.exports.en = {
     startMessage: 'Welcome to the chat. Meanwhile the transmission is online you can make any questions or comments to artist or curators.',
     addLayer: 'Add layer',
     removeLayer: 'Remove layer',
-    close: 'Close',
+    warn1: 'Click the buttons to remove (-) or to add layers (+)',
+    warn2: 'Use the mouse or move with your finger the model.',
+    warn3: 'Some layers have extra  actions on remove, discover them.',
+    warn4: 'The loading time of the 3d model can take around 2 minutes, your patience will be rewarded',
 }
 
 module.exports.fr = {
@@ -29,5 +35,8 @@ module.exports.fr = {
     startMessage: 'Bienvenue sur le chat. Pendant la diffusion en direct, vous pouvez demander ou commenter tout ce que vous voulez à l\'artiste ou aux membres du Pared.',
     addLayer: 'Add layer',
     removeLayer: 'Remove layer',
-    close: 'Cerrar',
+    warn1: 'Click the buttons to remove (-) or to add layers (+)',
+    warn2: 'Use the mouse or move with your finger the model.',
+    warn3: 'Some layers have extra  actions on remove, discover them.',
+    warn4: 'The loading time of the 3d model can take around 2 minutes, your patience will be rewarded',
 }

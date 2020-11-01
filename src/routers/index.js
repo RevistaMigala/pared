@@ -40,8 +40,7 @@ router.post('/message', async (req, res) => {
 router.get('/message', async (req, res) => {
     try {
         const messages = await Message.find({ expo: req.query.expo })
-        res.status(200)
-        res.send(JSON.stringify(messages))
+        res.sendStatus(200)
     } catch(error) {
         console.error(error)
 
@@ -98,6 +97,20 @@ router.get('/exercise-1', validateLang, async (req, res) => {
     } catch (error) {
         console.error(error)
         res.render('index', copies.indexValues('es'))
+    }
+})
+
+router.get('/services/lina', validateLang, async (req, res) => {
+    const twitter = new TwitterClient()
+
+    try {
+        const twits = await twitter.getGrandmaTuits(req.query.lang)
+        const [tuit] = twits.statuses.map((status) => status.full_text.replace(/\n/g, '/ '))
+        res.status(200)
+        res.send(JSON.stringify(tuit))
+    } catch (error) {
+        res.status(500)
+        res.send()
     }
 })
 
