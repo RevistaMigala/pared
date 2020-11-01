@@ -6,6 +6,7 @@ const validateLang = require('../middleware/validateLang')
 const Submit = require('../models/submit')
 const Message = require('../models/message')
 const { TwitterClient } = require('../utils/twitter_client')
+const { sanitizeMessage } = require('../utils/sanitizer')
 require('../../db/mongoose')
 
 const router = new express.Router()
@@ -19,7 +20,13 @@ router.get('/', (req, res) => {
 router.post('/message', async (req, res) => {
     console.log('body', req.body)
     try {
-        const message = new Message(req.body)
+        const messageBody = sanitizeMessage(req.body)
+
+        if (!messageBody) {
+            console.log('Malicious message detected')
+            res.sendStatus(200)
+        }
+        const message = new Message(messageBody)
         await message.save()
 
         res.sendStatus(201)
@@ -33,8 +40,7 @@ router.post('/message', async (req, res) => {
 router.get('/message', async (req, res) => {
     try {
         const messages = await Message.find({ expo: req.query.expo })
-        res.status(200)
-        res.send(JSON.stringify(messages))
+        res.sendStatus(200)
     } catch(error) {
         console.error(error)
 
@@ -94,6 +100,20 @@ router.get('/exercise-1', validateLang, async (req, res) => {
     }
 })
 
+router.get('/services/lina', validateLang, async (req, res) => {
+    const twitter = new TwitterClient()
+
+    try {
+        const twits = await twitter.getGrandmaTuits(req.query.lang)
+        const [tuit] = twits.statuses.map((status) => status.full_text.replace(/\n/g, '/ '))
+        res.status(200)
+        res.send(JSON.stringify(tuit))
+    } catch (error) {
+        res.status(500)
+        res.send()
+    }
+})
+
 router.get('/expos', validateLang, async (req, res) => {
     res.render('expos', copies.exposValues(req.query.lang))
 })
@@ -108,6 +128,10 @@ router.get('/expos/adriangonzalez', validateLang, async (req, res) => {
 
 router.get('/expos/alejandraaguilar', validateLang, async (req, res) => {
     res.render('alejandraAguilar', copies.alejandraAguilarValues(req.query.lang))
+})
+
+router.get('/expos/linavelasquez', validateLang, async (req, res) => {
+    res.render('linaVelasquez', copies.linaVelasquezValues(req.query.lang))
 })
 
 router.get('*', (req, res) => {

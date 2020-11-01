@@ -35,10 +35,28 @@ module.exports.TwitterClient = class TwitterClient {
             '#sonnet',
             'poesie',
         ],
+        this.enLinaQuery = [
+            'grandmother',
+            'grandma',
+        ],
+        this.esLinaQuery = [
+            'abuela',
+            'abuelita',
+        ],
+        this.frLinaQuery = [
+            'grand-mère',
+            'grand-maman',
+            'mamie',
+        ],
         this.queryMap = {
             es: this.esQuery,
             en: this.enQuery,
             fr: this.frQuery,
+        }
+        this.queryLinaMap = {
+            es: this.esLinaQuery,
+            en: this.enLinaQuery,
+            fr: this.frLinaQuery,
         }
     }
 
@@ -52,6 +70,21 @@ module.exports.TwitterClient = class TwitterClient {
             lang: _lang,
             include_entities: false,
             count: 14,
+            result_type: 'recent',
+            tweet_mode: 'extended',
+        }
+        return this.client.get("search/tweets", params)
+    }
+
+    getGrandmaTuits (lang) {
+        const _lang = (lang) ? lang : 'es'
+        const query = this.queryLinaMap[lang]
+        const i = Math.floor(Math.random() * this.queryLinaMap[lang].length)
+        const params = {
+            q: query[i] + ' +exclude:retweets',
+            lang: _lang,
+            include_entities: false,
+            count: 1,
             result_type: 'recent',
             tweet_mode: 'extended',
         }
