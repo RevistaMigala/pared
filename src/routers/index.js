@@ -6,6 +6,7 @@ const validateLang = require('../middleware/validateLang')
 const Submit = require('../models/submit')
 const Message = require('../models/message')
 const { TwitterClient } = require('../utils/twitter_client')
+const { sanitizeMessage } = require('../utils/sanitizer')
 require('../../db/mongoose')
 
 const router = new express.Router()
@@ -19,7 +20,13 @@ router.get('/', (req, res) => {
 router.post('/message', async (req, res) => {
     console.log('body', req.body)
     try {
-        const message = new Message(req.body)
+        const messageBody = sanitizeMessage(req.body)
+
+        if (!messageBody) {
+            console.log('Malicious message detected')
+            res.sendStatus(200)
+        }
+        const message = new Message(messageBody)
         await message.save()
 
         res.sendStatus(201)
