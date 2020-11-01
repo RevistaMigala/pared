@@ -123,43 +123,41 @@
           childrenCount -= 1
           if (childrenCount === 12) {
             actionContainer.className = 'action-container'
-            actionContainer.innerHTML = closeButton + audio1
+            actionContainer.innerHTML = closeButton + map
             document.querySelector('#remove-action').addEventListener('click', () => {
                 actionContainer.className = 'action-container-hidden'
             })
           }
-          if (childrenCount === 9) {
-            console.log('action twitter')
-          }
-          if (childrenCount === 7) {
-            actionContainer.className = 'action-container'
-            actionContainer.innerHTML = closeButton + video
-            document.querySelector('#remove-action').addEventListener('click', () => {
-                actionContainer.className = 'action-container-hidden'
-            })
-          }
-          if (childrenCount === 6) {
-            actionContainer.className = 'action-container'
-            actionContainer.innerHTML = closeButton + audio2
-            document.querySelector('#remove-action').addEventListener('click', () => {
-                actionContainer.className = 'action-container-hidden'
-            })
-          }
-          if (childrenCount === 2) {
+          if (childrenCount === 11) {
             actionContainer.className = 'action-container'
             actionContainer.innerHTML = closeButton + audio3
             document.querySelector('#remove-action').addEventListener('click', () => {
                 actionContainer.className = 'action-container-hidden'
             })
           }
-          if (childrenCount === 1) {
+          if (childrenCount === 7) {
             actionContainer.className = 'action-container'
-            actionContainer.innerHTML = closeButton + map
+            actionContainer.innerHTML = closeButton + audio2
             document.querySelector('#remove-action').addEventListener('click', () => {
                 actionContainer.className = 'action-container-hidden'
             })
-
-            console.log('map')
+          }
+          if (childrenCount === 6) {
+            actionContainer.className = 'action-container'
+            actionContainer.innerHTML = closeButton + video
+            document.querySelector('#remove-action').addEventListener('click', () => {
+                actionContainer.className = 'action-container-hidden'
+            })
+          }
+          if (childrenCount === 4) {
+            console.log('action twitter')
+          }
+          if (childrenCount === 1) {
+            actionContainer.className = 'action-container'
+            actionContainer.innerHTML = closeButton + audio1
+            document.querySelector('#remove-action').addEventListener('click', () => {
+                actionContainer.className = 'action-container-hidden'
+            })
           }
           model.children = layers.slice(0, childrenCount)
       })
@@ -171,15 +169,24 @@
           childrenCount += 1
           if (childrenCount === 13) {
             actionContainer.className = 'action-container'
-            actionContainer.innerHTML = closeButton + audio1
+            actionContainer.innerHTML = closeButton + map
             document.querySelector('#remove-action').addEventListener('click', () => {
                 actionContainer.className = 'action-container-hidden'
             })
-
-            console.log('action 1')
           }
-          if (childrenCount === 9) {
-            console.log('action twitter')
+          if (childrenCount === 12) {
+            actionContainer.className = 'action-container'
+            actionContainer.innerHTML = closeButton + audio3
+            document.querySelector('#remove-action').addEventListener('click', () => {
+                actionContainer.className = 'action-container-hidden'
+            })
+          }
+          if (childrenCount === 8) {
+            actionContainer.className = 'action-container'
+            actionContainer.innerHTML = closeButton + audio2
+            document.querySelector('#remove-action').addEventListener('click', () => {
+                actionContainer.className = 'action-container-hidden'
+            })
           }
           if (childrenCount === 7) {
             actionContainer.className = 'action-container'
@@ -188,23 +195,15 @@
                 actionContainer.className = 'action-container-hidden'
             })
           }
-          if (childrenCount === 6) {
-            actionContainer.className = 'action-container'
-            actionContainer.innerHTML = closeButton + audio2
-            document.querySelector('#remove-action').addEventListener('click', () => {
-                actionContainer.className = 'action-container-hidden'
-            })
-
-            console.log('action 2')
+          if (childrenCount === 5) {
+            console.log('action twitter')
           }
           if (childrenCount === 2) {
             actionContainer.className = 'action-container'
-            actionContainer.innerHTML = closeButton + audio3
+            actionContainer.innerHTML = closeButton + audio1
             document.querySelector('#remove-action').addEventListener('click', () => {
                 actionContainer.className = 'action-container-hidden'
             })
-
-            console.log('action 3')
           }
 
           model.children = layers.slice(0, childrenCount)
