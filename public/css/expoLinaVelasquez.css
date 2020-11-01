@@ -6,26 +6,7 @@
     input[type='button'] {
       width: 10vw !important;
       height: 10vw !important;
-      font-family: 'Alegreya Sans', sans-serif;
       font-size: xx-large !important;
-      font-style: normal;
-      letter-spacing: 2px;
-      text-align: center;
-      color: white;
-      background-color: var(--rosa);
-      cursor: pointer;
-      display: inline-block;
-      border-radius: 100px;
-      justify-self: center;
-    }
-
-    .layer-buttons {
-      position: relative !important;
-      margin: auto;
-      width: 100%;
-      z-index: 3;
-      display: grid;
-      grid-template-columns: 50% 50%;
     }
 }
 
@@ -165,11 +146,11 @@ canvas {
 .loading {
   position: absolute;
   z-index: 2;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: #f1f1f1;
+  width: 70%;
+  height: 50%;
+  top: 15%;
+  left: 15%;
+  background: none;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -210,8 +191,8 @@ canvas {
 }
 
 input[type='button'] {
-  width: 2rem;
-  height: 2rem;
+  width: 3rem;
+  height: 3rem;
   font-family: 'Alegreya Sans', sans-serif;
   font-size: x-large;
   font-style: normal;
@@ -221,6 +202,7 @@ input[type='button'] {
   background-color: var(--rosa);
   cursor: pointer;
   border-radius: 100px;
+  justify-self: center;
 }
 
 input[type='button']:hover {
@@ -228,9 +210,11 @@ input[type='button']:hover {
 }
 
 .layer-buttons {
-  position: absolute;
+  margin: auto;
+  width: 100%;
   z-index: 3;
-  top: 5%;
+  display: grid;
+  grid-template-columns: 50% 50%;
 }
 
 .action-container {
@@ -252,10 +236,9 @@ input[type='button']:hover {
 }
 
 .action-container input[type='button'], .action-container-hidden input[type='button'] {
-  position: relative;
-  top: 0;
-  left: 2rem;
-  width: 2rem;
+  position: absolute;
+  top: 5%;
+  left: 5%;
 }
 
 .action-element {
