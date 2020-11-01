@@ -1,0 +1,69 @@
+<link rel="stylesheet" href="/css/expoLinaVelasquez.css">
+<input id="expoName" type="text" value="LinaVelasquez" style="display: none;">
+
+<div class="title-group">
+  <h1 class="expo-title es">Profundo</h1>
+  <h1 class="expo-title en">Deep</h1>
+</div>
+
+<p class="expo-author">Lina Velasquez</p>
+<p class="expo-city">Medellín</p>
+<p class="expo-description">{{expoDescription}}</p>
+
+<h1 class="expo-title es">Inauguración</h1>
+<h1 class="expo-title en">Opening</h1>
+<p></p>
+<div class="videoconference">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/pi1jjQhrbWo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+{{>chat}}
+
+<div class="container">
+
+  <div class="action-container-hidden"></div>
+  <div class="canvas-container">
+      <div class="loading" id="js-loader"><div class="loader"></div></div>
+      <canvas id="c"></canvas>
+  </div>
+  <div class="layer-buttons">
+    <input type="button" value="-" id="remove-layer">
+    <input type="button" value="+" id="add-layer">
+  </div>
+  <div class="info-contaner">
+    <p>Profundo</p>
+    <p>Deep</p>
+    <p>Objeto gráfico (14 capas con fotografías y audio)</p>
+    <p>Graphic object (14 layers with photos and audio)</p>
+    <p>2020</p>
+  </div>
+</div>
+
+<h1 class="expo-title es">Enlaces</h1>
+<h1 class="expo-title en">Links</h1>
+
+<div class="links" >
+  <div class="link">
+    <div class="link-image">
+      <a href="/assets/expoLinaVelasquez/invitacion.png" target="_blank"><img src="/assets/expoLinaVelasquez/invitacion.png" alt=""></a>
+    </div>
+    <div class="link-info">
+      <p>Cartel</p>
+    </div>
+  </div>
+  <div class="link">
+    <div class="link-image">
+      <a href="http://migala.mx/recursos/pared/linaVelasquez/catalogo.pdf" target="_blank"><img src="/assets/expoLinaVelasquez/link1.png" alt=""></a>
+    </div>
+    <div class="link-info">
+      <p>Catálogo</p>
+    </div>
+  </div>
+</div>
+<h1 class="expo-title es">Reconocimientos</h1>
+<h1 class="expo-title en">Acknowledges</h1>
+<p class="expo-description">Translations/traducción // Text review/revisión de textos<br>Gala Anaya Vázquez, Beatriz Marrodán</p>
+<p class="expo-description">Social Media / Redes <br> Fernando Victoria</p>
+<script src='./js/3d/three.min.js'></script>
+<script src='./js/3d/GLTFLoader.js'></script>
+<script src='./js/3d/OrbitControls.js'></script>
+<script src='./assets/expoLinaVelasquez/3d/main.js'></script>

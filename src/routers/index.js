@@ -110,6 +110,10 @@ router.get('/expos/alejandraaguilar', validateLang, async (req, res) => {
     res.render('alejandraAguilar', copies.alejandraAguilarValues(req.query.lang))
 })
 
+router.get('/expos/linavelasquez', validateLang, async (req, res) => {
+    res.render('linaVelasquez', copies.linaVelasquezValues(req.query.lang))
+})
+
 router.get('*', (req, res) => {
     res.render('404', copies.errorValues)
     console.log('Requested', req._parsedOriginalUrl.pathname)
