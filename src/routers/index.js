@@ -40,7 +40,9 @@ router.post('/message', async (req, res) => {
 router.get('/message', async (req, res) => {
     try {
         const messages = await Message.find({ expo: req.query.expo })
-        res.sendStatus(200)
+
+        res.status(200)
+        res.send(messages)
     } catch(error) {
         console.error(error)
 
