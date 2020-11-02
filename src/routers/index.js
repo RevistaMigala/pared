@@ -130,6 +130,10 @@ router.get('/expos/alejandraaguilar', validateLang, async (req, res) => {
     res.render('alejandraAguilar', copies.alejandraAguilarValues(req.query.lang))
 })
 
+router.get('/expos/aliciaayanegui', validateLang, async (req, res) => {
+    res.render('aliciaAyanegui', copies.aliciaAyaneguiValues(req.query.lang))
+})
+
 router.get('/expos/linavelasquez', validateLang, async (req, res) => {
     res.render('linaVelasquez', copies.linaVelasquezValues(req.query.lang))
 })
