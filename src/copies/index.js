@@ -10,6 +10,7 @@ const sergioSuarezValues = require('./sergioSuarezPage')
 const adrianGonzalezValues = require('./adrianGonzalezPage')
 const alejandraAguilarValues = require('./alejandraAguilarPage')
 const aliciaAyaneguiValues = require('./aliciaAyaneguiPage')
+const linaVelasquezValues = require('./LinaVelasquezPage')
 
 module.exports = {
     indexValues,
@@ -23,5 +24,6 @@ module.exports = {
     adrianGonzalezValues,
     alejandraAguilarValues,
     aliciaAyaneguiValues,
+    linaVelasquezValues,
     errorValues,
 }

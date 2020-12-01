@@ -50,7 +50,6 @@ router.get('/message', async (req, res) => {
     }
 })
 
-
 router.get('/about', (req, res) => {
     res.render('about', copies.aboutValues(req.query.lang))
 })
