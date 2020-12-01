@@ -33,7 +33,7 @@ module.exports.fr = {
     piece2: '(ORDONNANCE MÉDICALE IMSS ROSE) · Ma. E. Abarca Tortolero - Sans date -IMSS',
     piece3: '(ORDONNANCE MÉDICALE VERTE DE L\ÉTAT DU MEXIQUE) · Coca Soriano - 6 janv. 2015 - ISSEMYM',
     piece4: '(ORDONNANCE MÉDICALE DE L\'INP) · Alejandra González Ch. - Sans date - INP',
-    pieceDescription: 'Ordonnance médicale pour la chirurgie pétrolière',
+    pieceDescription: 'Ordonnance médicale intervenue à l’huile',
 }
 
 module.exports.en = {
