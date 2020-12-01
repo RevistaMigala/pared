@@ -3,9 +3,11 @@ module.exports.sanitizeMessage = ({ username, message, expo }) => {
         'LinaVelasquez',
         'SergioSuarez',
         'AliciaAyanegui',
-        'AlejandraAguilar'
+        'AlejandraAguilar',
+        'CirceIrasema'
     ]
     if (!validExpos.includes(expo)) {
+        console.log('Expo not valid', expo)
         return
     }
     return {
