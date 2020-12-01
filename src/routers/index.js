@@ -50,7 +50,6 @@ router.get('/message', async (req, res) => {
     }
 })
 
-
 router.get('/about', (req, res) => {
     res.render('about', copies.aboutValues(req.query.lang))
 })
@@ -138,6 +137,10 @@ router.get('/expos/aliciaayanegui', validateLang, async (req, res) => {
 
 router.get('/expos/linavelasquez', validateLang, async (req, res) => {
     res.render('linaVelasquez', copies.linaVelasquezValues(req.query.lang))
+})
+
+router.get('/expos/circeirasema', validateLang, async (req, res) => {
+    res.render('circeIrasema', copies.circeIrasemaValues(req.query.lang))
 })
 
 router.get('*', (req, res) => {

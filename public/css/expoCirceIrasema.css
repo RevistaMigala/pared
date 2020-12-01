@@ -1,0 +1,174 @@
+body {
+  font-family: 'Alegreya', serif;
+  color: var(--gris);
+  text-align: center;
+  background-color: white;
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  top: 0;
+  right: 0;
+  text-size-adjust: 200%;
+  -webkit-text-size-adjust: 200%;
+}
+
+.select {
+  top: 0;
+  right: 5%;
+}
+
+.title-group {
+  font-style: normal;
+  margin-top: 3em;
+}
+
+.expo-title {
+  margin: 0 0 0 10vw;
+  line-height: .8em;
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  width: 70%;
+  min-width: 300px;
+}
+
+.expo-title.es {
+  text-align: left;
+}
+
+.expo-title.en {
+  text-align: right;
+  color: var(--gris);
+}
+
+.expo-author, .expo-city {
+  margin-top: 1.6em;
+  margin-left: 10vw;
+  margin-right: auto;
+  min-width: 300px;
+  width: 50%;
+  text-align: justify;
+  font-weight: bold;
+}
+
+.expo-description {
+  margin-top: 1.6em;
+  margin-left: 10vw;
+  margin-bottom: 3em;
+  text-align: justify;
+  width: 50%;
+  min-width: 300px;
+}
+
+@media (orientation: portrait) {
+  .expo-description {
+    margin-top: 1.6em;
+    margin-left: 10vw;
+    margin-bottom: 3em;
+    text-align: justify;
+    width: 80%;
+    min-width: 300px;
+  }
+}
+
+.info-contaner {
+  background-color: var(--azul);
+  min-width: 200px;
+  padding: .8em;
+  z-index: 5;
+  width: 50%;
+}
+
+.info-contaner p {
+  color: white;
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: .6em;
+  font-style: normal;
+  letter-spacing: 2px;
+  text-align: left;
+  margin: 0;
+}
+
+.image-container {
+  margin: auto;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  width: 100vw;
+}
+
+.image-container > a > img {
+  text-align: left;
+  margin: auto;
+  max-height: 100vh;
+  max-width: 100%;
+}
+
+@media (orientation: portrait) {
+    .piece-2-container > img {
+      margin: auto;
+      width: 100vw;
+      height: auto;
+      max-height: 100vh;
+    }
+}
+
+.links {
+  width: 80%;
+  margin: 3em auto;
+}
+
+.link {
+  width: 200px;
+  height: 300px;
+  background-color: var(--rosa);
+  border-left: solid 2px var(--azul);
+  padding: .8em;
+  display: inline-block;
+  margin: .8em;
+  box-shadow: 10px 5px 0px var(--gris);
+  vertical-align: bottom;
+}
+
+.link-image {
+  height: 60%;
+  display: block;
+}
+
+.link-image > a > img {
+  cursor: pointer;
+}
+
+.link-info {
+  height: 40%;
+  display: block;
+  padding: .8em;
+}
+
+.link img {
+  max-width: 90%;
+  max-height: 100%;
+  height: auto;
+}
+
+.link p {
+  color: white;
+  font-style: normal;
+  font-family: 'Alegreya Sans', sans-serif;
+  margin: 0;
+}
+
+.link-author, .link-title, .link-lang {
+  font-size: .8em;
+}
+
+.videoconference {
+  width: 70%;
+  margin-left: 10vw;
+  text-align: left;
+}
+
+.videoconference > iframe {
+  width: 100%;
+  min-width: 300px;
+  height: 30vw;
+  min-height: 200px;
+}
