@@ -139,6 +139,10 @@ router.get('/expos/linavelasquez', validateLang, async (req, res) => {
     res.render('linaVelasquez', copies.linaVelasquezValues(req.query.lang))
 })
 
+router.get('/expos/circeirasema', validateLang, async (req, res) => {
+    res.render('circeIrasema', copies.circeIrasemaValues(req.query.lang))
+})
+
 router.get('*', (req, res) => {
     res.render('404', copies.errorValues)
     console.log('Requested', req._parsedOriginalUrl.pathname)
