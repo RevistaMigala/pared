@@ -1,9 +1,9 @@
 (function() {
   // Elements
   const closeButton = '<input type="button" value="x" id="remove-action">',
-    audio1 = '<audio class="action-element" src="http://migala.mx/recursos/pared/linaVelazquez/Audio1.mp3" controls>',
-    audio2 = '<audio class="action-element" src="http://migala.mx/recursos/pared/linaVelazquez/Audio2.mp3" controls>',
-    audio3 = '<audio class="action-element" src="http://migala.mx/recursos/pared/linaVelazquez/Audio3.mp3" controls>',
+    audio1 = '<audio class="action-element" src="http://migala.mx/recursos/pared/linaVelasquez/Audio1.mp3" controls>',
+    audio2 = '<audio class="action-element" src="http://migala.mx/recursos/pared/linaVelasquez/Audio2.mp3" controls>',
+    audio3 = '<audio class="action-element" src="http://migala.mx/recursos/pared/linaVelasquez/Audio3.mp3" controls>',
     map = '<iframe class="action-element" width="560" height="315" src="https://www.google.com/maps/embed?pb=!4v1604074408449!6m8!1m7!1sdgKheES1Dz-TFVWENiKwCQ!2m2!1d6.959738127539058!2d-75.41868016559151!3f24.19!4f0.20000000000000284!5f0.7820865974627469" width="600" height="450" frameborder="0" style="border:0;" aria-hidden="false" tabindex="0"> </iframe>',
     video = '<iframe class="action-element" width="560" height="315" src="https://www.youtube.com/embed/Wc607NxmbKM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
     loaderAnim = document.getElementById('js-loader'),
