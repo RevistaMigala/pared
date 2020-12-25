@@ -1,6 +1,7 @@
 const fs = require('fs')
 const path = require('path')
 const express = require('express')
+const Auth = require('../middleware/auth')
 const { upload, imageGallery } = require('../middleware/upload')
 const validateLang = require('../middleware/validateLang')
 const Submit = require('../models/submit')
