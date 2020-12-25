@@ -143,6 +143,15 @@ router.get('/expos/circeirasema', validateLang, async (req, res) => {
     res.render('circeIrasema', copies.circeIrasemaValues(req.query.lang))
 })
 
+router.get('/expos/manuelagromo', validateLang, async (req, res) => {
+    const texts = await CasapropiaRecord.find()
+    const values = {
+        texts,
+        ...copies.manuelaGRomoValues(req.query.lang),
+    }
+    res.render('manuelaGRomo', values)
+})
+
 router.get('*', (req, res) => {
     res.render('404', copies.errorValues)
     console.log('Requested', req._parsedOriginalUrl.pathname)

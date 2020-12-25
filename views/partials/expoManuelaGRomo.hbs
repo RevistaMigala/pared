@@ -1,0 +1,71 @@
+<link rel="stylesheet" href="/css/expoManuelaGRomo.css">
+<input id="expoName" type="text" value="ManuelaGRomo" style="display: none;">
+<script type="text/javascript" src="/assets/expoManuelaGRomo/main.js">
+
+</script>
+<div class="title-group">
+  <h1 class="expo-title es">Proyecyo Casa Propia</h1>
+  <h1 class="expo-title en">Proyecyo Casa Propia</h1>
+  <h1 class="expo-title es">Proyecyo Casa Propia</h1>
+</div>
+
+<p class="expo-author">Manuela G Romo</p>
+<p class="expo-city">Ciudad de México</p>
+<p class="expo-description">{{expoDescription}}</p>
+
+<h1 class="expo-title es">Inauguración</h1>
+<h1 class="expo-title en">Opening</h1>
+<p></p>
+<div class="videoconference">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/3HRRdpnjR-A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+{{>chat}}
+
+<h1 class="expo-title es">Casa propia</h1>
+<h1 class="expo-title en">Casa propia</h1>
+
+<div class="container">
+  <div class="text-scroll">
+    {{#each texts}}
+        <p id="{{this._id}}">{{this.text}}</p>
+    {{/each}}
+  </div>
+  <div class="image-scroll">
+  </div>
+</div>
+
+<h1 class="expo-title es">Enlaces</h1>
+<h1 class="expo-title en">Links</h1>
+
+<div class="links" >
+  <div class="link">
+    <div class="link-image">
+      <a href="http://migala.mx/recursos/pared/circeIrasema/invitacion.png" target="_blank"><img src="http://migala.mx/recursos/pared/circeIrasema/invitacion.png" alt=""></a>
+    </div>
+    <div class="link-info">
+      <p>Cartel</p>
+    </div>
+  </div>
+  <div class="link">
+    <div class="link-image">
+      <a href="https://migala.mx/pintura-es-el-acto-de-pintar/" target="_blank"><img src="http://migala.mx/recursos/pared/circeIrasema/link1.png" alt=""></a>
+    </div>
+    <div class="link-info">
+      <p>Artículo</p>
+      <p>La pintura es el acto de pintar</p>
+      <p>David Enríquez</p>
+    </div>
+  </div>
+  <div class="link">
+    <div class="link-image">
+      <a href="http://migala.mx/recursos/pared/circeIrasema/catalogo.pdf" target="_blank"><img src="http://migala.mx/recursos/pared/circeIrasema/link2.png" alt=""></a>
+    </div>
+    <div class="link-info">
+      <p>Catálogo</p>
+    </div>
+  </div>
+</div>
+<h1 class="expo-title es">Reconocimientos</h1>
+<h1 class="expo-title en">Acknowledges</h1>
+<p class="expo-description">Translations/traducción // Text review/revisión de textos<br>Gala Anaya Vázquez, Beatriz Marrodán</p>
+<p class="expo-description">Social Media / Redes <br> Fernando Victoria</p>
