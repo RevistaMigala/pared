@@ -12,13 +12,15 @@ body {
   text-align: center;
   background-color: white;
   margin: 0 auto;
-  position: absolute;
-  width: 80%;
+  position: relative;
+  width: 100%;
   top: 0;
   right: 0;
-  left: 0;
-  text-size-adjust: 200%;
-  -webkit-text-size-adjust: 200%;
+  font-size: 2vh;
+}
+
+.title {
+  font-size: 2.5em;
 }
 
 h1 {
@@ -26,13 +28,11 @@ h1 {
   color: var(--rosa);
   text-transform: uppercase;
   letter-spacing: 2px;
-  text-size-adjust: 300%;
-  -webkit-text-size-adjust: 300%;
 }
 
 .select {
   position: absolute;
-  top: 1.5em;
+  top: 1em;
   right: -10%;
   font-family: 'Staatliches', sans-serif;
   color: var(--azul);
@@ -41,8 +41,6 @@ h1 {
 	-webkit-appearance: none;
   border: none;
   font-size: 1.15em;
-  text-size-adjust: 200%;
-  -webkit-text-size-adjust: 200%;
   background: none;
 }
 
@@ -70,6 +68,7 @@ p.footer::first-letter {
 
 .footer a {
   padding: 0;
+  font-size: .9em;
 }
 
 a {
@@ -125,4 +124,51 @@ input[type=text]:focus, textarea:focus {
   margin: 3em auto;
   text-align: justify;
   text-align-last: center;
+}
+
+.link p {
+  color: white;
+  font-style: normal;
+  font-family: 'Alegreya Sans', sans-serif;
+  margin: 0;
+  font-size: 1em;
+}
+
+
+.links {
+  width: 80%;
+  margin: 3em auto;
+}
+
+.link {
+  width: 12em;
+  height: 18em;
+  background-color: var(--rosa);
+  border-left: solid 2px var(--azul);
+  padding: .8em;
+  display: inline-block;
+  margin: .8em;
+  box-shadow: 10px 5px 0px var(--gris);
+  vertical-align: bottom;
+}
+
+.link-image {
+  height: 12em;
+  display: block;
+}
+
+.link-image > a > img {
+  cursor: pointer;
+}
+
+.link-info {
+  height: 6em;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.link img {
+  max-width: 90%;
+  max-height: 12em;
 }

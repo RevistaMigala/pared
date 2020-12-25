@@ -10,11 +10,6 @@
   width: 70%;
   min-width: 300px;
   border-left: solid 2px var(--rosa);
-  font-size: 1rem;
-}
-
-input[type="text"] {
-  font-size: 1rem;
 }
 
 .messages {
