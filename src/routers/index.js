@@ -6,8 +6,11 @@ const { upload, imageGallery } = require('../middleware/upload')
 const validateLang = require('../middleware/validateLang')
 const Submit = require('../models/submit')
 const Message = require('../models/message')
+const CasapropiaRecord = require('../models/casapropiarecord')
 const { TwitterClient } = require('../utils/twitter_client')
-const { sanitizeMessage } = require('../utils/sanitizer')
+const FtpClient = require('../utils/ftp_client')
+const { sanitizeMessage, sanitizeWebSafe } = require('../utils/sanitizer')
+const { bufferToStream } = require('../utils/streams')
 require('../../db/mongoose')
 
 const router = new express.Router()
@@ -68,7 +71,7 @@ router.get('/submit', (req, res) => {
     res.render('submit', copies.submitValues(req.query.lang))
 })
 
-router.post('/submit', imageGallery, async (req, res) => {
+router.post('/submit', async (req, res) => {
     try {
         const submit = new Submit(req.body)
         await submit.save()
@@ -99,6 +102,49 @@ router.get('/exercise-1', validateLang, async (req, res) => {
     } catch (error) {
         console.error(error)
         res.render('index', copies.indexValues('es'))
+    }
+})
+
+router.get('/casapropia', Auth.authorizer(), validateLang, async (req, res) => {
+    const images = await CasapropiaRecord.find()
+    const values = {
+        ...copies.casapropiaValues(req.query.lang),
+        images,
+    }
+    res.render('casapropia', values)
+})
+
+router.get('/services/casapropia', validateLang, async (req, res) => {
+    try {
+        const images = await CasapropiaRecord.find()
+
+        res.status(200)
+        res.send(images)
+    } catch(error) {
+        console.error(error)
+
+        res.sendStatus(500)
+    }
+})
+
+router.post('/services/casapropia', upload.single('image'), async (req, res) => {
+    try {
+        const ftp = new FtpClient()
+        const imageFile = bufferToStream(req.file.buffer)
+        const imageName = sanitizeWebSafe(req.file.originalname)
+        const payload = {
+            ...req.body,
+            image_url: `${process.env.CASAPROPIA_HTTP_URL}/${imageName}`,
+        }
+        const record = new CasapropiaRecord(payload)
+        await record.save()
+        await ftp.uploadFile(imageFile, imageName)
+
+        res.redirect('/casapropia')
+    } catch(error) {
+        console.error(error)
+
+        res.render('casapropia', copies.casapropiaValuesError(req.query.lang))
     }
 })
 
