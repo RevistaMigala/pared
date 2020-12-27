@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+    <head>
+        {{>analytics}}
+        <meta charset="utf-8">
+        <title>Pared</title>
+        {{>links}}
+        {{>scripts}}
+        <link rel="stylesheet" href="/css/casapropia.css">
+    </head>
+    <body>
+        {{>header}}
+        <p class="description">{{description}}</p>
+        <p class="error">{{error}}</p>
+        <p class="description">{{success}}</p>
+        <form class="submit" action="/services/casapropia?lang={{langDefault}}" method="post" enctype="multipart/form-data">
+            <p>{{required}}</p>
+            <input type="text" name="creator_name" placeholder="{{creator_name}}" required>
+            <textarea name="text" placeholder="{{text}}" rows="2" cols="40" required></textarea>
+            <input type="file" id="image" name="image" accept="image/png, image/jpeg, image/jpg">
+            <input type="submit" value="{{send}}">
+        </form>
+        <p>Imágenes actuales:</p>
+        {{#each images}}
+            <p class="column-3 first-block">{{this.creator_name}}</p>
+            <img class="column-3" src="{{this.image_url}}">
+            <p class="column-3">{{this.text}}</p>
+        {{/each}}
+        {{>footer}}
+    </body>
+</html>

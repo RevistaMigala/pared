@@ -1,8 +1,9 @@
 
 .exercise-1 {
   position: relative;
-  width: 100%;
+  width: 90%;
   height: 60vw;
+  margin: auto;
 }
 
 div.exercise-1 > img {

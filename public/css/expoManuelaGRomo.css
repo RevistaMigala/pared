@@ -1,16 +1,11 @@
-body {
-  width: 80%;
-}
-
-@media (orientation: portrait) {
-    .piece-2-container {
-        max-height: 100vw;
-    }
+.select {
+  top: 0;
+  right: 5%;
 }
 
 .title-group {
   font-style: normal;
-  margin-top: 3em;
+  margin-top: 2em;
 }
 
 .expo-title {
@@ -79,30 +74,6 @@ body {
   margin: 0;
 }
 
-.piece-2 {
-  margin: auto;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  width: 100vw;
-  transform: translateX(-10%);
-  border-left: 2px var(--azul)  solid;
-}
-
-.piece-2-container > img {
-  margin: auto;
-  height: 100vh;
-  max-width: 100vw;
-}
-
-@media (orientation: portrait) {
-    .piece-2-container > img {
-      margin: auto;
-      width: 100vw;
-      height: auto;
-      max-height: 100vh;
-    }
-}
-
 .videoconference {
   width: 70%;
   margin-left: 10vw;
@@ -117,7 +88,80 @@ body {
 }
 
 .container {
+  height: 100vh;
+  overflow: hidden;
+  margin: 3rem 0;
+}
+
+.image-scroll, .text-scroll {
+  display: inline-block;
+}
+
+.image-scroll {
+  width: 64%;
+  height: 100vh;
+  overflow-y: scroll;
   position: relative;
+}
+
+.image-scroll > img {
+  max-width: 100%;
+  max-height: 100%;
   width: auto;
   height: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.text-scroll {
+  width: 35%;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+.text-scroll > p {
+  text-align: left;
+  font-style: normal;
+  padding: 0 1em 0 1em;
+  transition: color 0.1s ease-in-out;
+}
+
+.text-scroll > p:hover {
+  color: var(--rosa);
+  transition: color 0.1s ease-in-out;
+}
+
+.touch-selected {
+  color: var(--rosa);
+  transition: color 0.1s ease-in-out;
+}
+
+@media (orientation: portrait) {
+  .image-scroll, .text-scroll {
+    display: block;
+  }
+
+  .image-scroll {
+    width: 100%;
+    height: 50%;
+  }
+
+  .text-scroll > p {
+    padding: 1em;
+    display: inline-block;
+    white-space: normal;
+    vertical-align: text-top;
+    height: 90%;
+  }
+
+  .text-scroll {
+    white-space: nowrap;
+    width: 100%;
+    height: 50%;
+    overflow: scroll;
+  }
 }

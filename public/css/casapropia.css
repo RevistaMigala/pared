@@ -1,0 +1,26 @@
+.column-3 {
+    width: 25%;
+    display: inline-block;
+    text-align: left;
+}
+
+.first-block {
+    font-weight: bold;
+}
+
+@media (orientation: portrait) {
+  .column-3 {
+      width: 80%;
+      display: block;
+      margin: auto;
+      text-align: justify;
+  }
+
+  .first-block {
+      margin-top: 1em;
+  }
+}
+
+.select {
+    display: none;
+}

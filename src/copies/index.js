@@ -12,6 +12,9 @@ const alejandraAguilarValues = require('./alejandraAguilarPage')
 const aliciaAyaneguiValues = require('./aliciaAyaneguiPage')
 const linaVelasquezValues = require('./linaVelasquezPage')
 const circeIrasemaValues = require('./circeIrasemaPage')
+const manuelaGRomoValues = require('./manuelaGRomoPage')
+const casapropiaValues = require('./casapropiaPage')
+const casapropiaValuesError = require('./casapropiaPageError')
 
 module.exports = {
     indexValues,
@@ -27,5 +30,8 @@ module.exports = {
     aliciaAyaneguiValues,
     linaVelasquezValues,
     circeIrasemaValues,
+    manuelaGRomoValues,
+    casapropiaValues,
+    casapropiaValuesError,
     errorValues,
 }
