@@ -193,7 +193,7 @@ router.get('/expos/circeirasema', validateLang, async (req, res) => {
 router.get('/expos/manuelagromo', validateLang, async (req, res) => {
     const texts = await CasapropiaRecord.find()
     const values = {
-        texts,
+        texts: texts.reverse(),
         ...copies.manuelaGRomoValues(req.query.lang),
     }
     res.render('manuelaGRomo', values)
