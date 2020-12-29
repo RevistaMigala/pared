@@ -43,6 +43,14 @@
   text-align: justify;
   width: 50%;
   min-width: 300px;
+  white-space: pre-line;
+}
+
+.submit {
+  text-align: justify;
+  width: 80%;
+  white-space: pre-line;
+  margin: 3rem auto;
 }
 
 @media (orientation: portrait) {

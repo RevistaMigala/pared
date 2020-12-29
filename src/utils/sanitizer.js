@@ -4,15 +4,24 @@ module.exports.sanitizeMessage = ({ username, message, expo }) => {
         'SergioSuarez',
         'AliciaAyanegui',
         'AlejandraAguilar',
-        'CirceIrasema'
+        'CirceIrasema',
+        'ManuelaGRomo'
     ]
     if (!validExpos.includes(expo)) {
         console.log('Expo not valid', expo)
         return
     }
     return {
-        username: username.replace('<', '&lt;').replace('>', '&gt').replace('script', 'escript').replace('/', '|'),
-        message: message.replace('<', '&lt;').replace('>', '&gt').replace('script', 'escript').replace('/', '|'),
+        username: username
+            .replace('<', '&lt;')
+            .replace('>', '&gt')
+            .replace('script', 'escript')
+            .replace('/', '|'),
+        message: message
+            .replace('<', '&lt;')
+            .replace('>', '&gt')
+            .replace('script', 'escript')
+            .replace('/', '|'),
         expo,
     }
 }
