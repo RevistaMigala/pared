@@ -17,8 +17,13 @@ const router = new express.Router()
 
 const copies = require('../copies')
 
-router.get('/', (req, res) => {
-    res.render('index', copies.indexValues(req.query.lang))
+router.get('/', async (req, res) => {
+    const texts = await CasapropiaRecord.find()
+    const values = {
+        texts: texts.reverse(),
+        ...copies.indexValues(req.query.lang),
+    }
+    res.render('index', values)
 })
 
 router.post('/message', async (req, res) => {
