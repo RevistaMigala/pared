@@ -1,0 +1,98 @@
+<link rel="stylesheet" href="/css/expoHelioSantos.css">
+<input id="expoName" type="text" value="HelioSantos" style="display: none;">
+<script type="text/javascript" src="/assets/expoHelioSantos/main.js">
+
+</script>
+<div class="title-group">
+  <h1 class="expo-title es">{{expoTitleEn}}</h1>
+  <h1 class="expo-title en">{{expoTitleFr}}</h1>
+  <h1 class="expo-title es">{{expoTitleEs}}</h1>
+</div>
+
+<p class="expo-author">Helio Santos</p>
+<p class="expo-city">Colima</p>
+<p class="expo-description">{{expoDescription}}</p>
+
+<h1 class="expo-title es">Inauguración</h1>
+<h1 class="expo-title en">Opening</h1>
+<div class="videoconference">
+  <iframe width="560" height="560" src="https://www.youtube.com/embed/inrDDx-lykU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+{{>chat}}
+
+<h1 class="expo-title es">Expo</h1>
+<h1 class="expo-title en">Expo</h1>
+<div class="landscape-1-container">
+  <a href="http://migala.mx/recursos/pared/helioSantos/paisajeoleothumb.jpg" target="_blank">
+    <img src="http://migala.mx/recursos/pared/helioSantos/paisajeoleothumb.jpg" alt="">
+  </a>
+  <div class="info-container">
+    <p class="info-container">Pintura de Paisaje 1</br>
+        Algoritmos de visión por computadora, machine learning y una red neuronal.</br>
+        Pintado por un plotter de dibujo.</br>
+        Óleo/tela.</br>
+        21 x 27 cm.
+      </p>
+  </div>
+</div>
+
+<div class="video-1-container">
+  <video src="http://migala.mx/recursos/pared/helioSantos/plotter.mp4" controls ></video>
+</div>
+
+{{# each images}}
+<h1 class="section-title">{{this.title}}</h1>
+<div class="images-container">
+  <div class="image-container" id='viewport-{{this.name}}'>
+    <a href="http://migala.mx/recursos/pared/helioSantos/{{this.name}}-0.jpg" target="_blank">
+      <img id="viewport-image" src="http://migala.mx/recursos/pared/helioSantos/{{this.name}}-0.jpg" alt="">
+    </a>
+  </div>
+  <div class="slider-container" id="images-{{this.name}}">
+    <span class="arrow"><</span>
+    {{# each images}}
+      <span class="bullet" id="{{../name}}-{{this}}">•</span>
+    {{/each}}
+    <span class="arrow">></span>
+  </div>
+</div>
+{{/each}}
+
+<div class="twitter-container">
+  <a class="twitter-timeline" align="center" data-width="60%" data-height="600" data-dnt="true" data-theme="dark" href="https://twitter.com/HeliodoroSantos?ref_src=twsrc%5Etfw"></a>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+
+<h1 class="expo-title es">Enlaces</h1>
+<h1 class="expo-title en">Links</h1>
+
+<div class="links" >
+  <div class="link">
+    <div class="link-image">
+      <a href="http://migala.mx/recursos/pared/helioSantos/invitacion.png" target="_blank"><img src="http://migala.mx/recursos/pared/helioSantos/invitacion.png" alt=""></a>
+    </div>
+    <div class="link-info">
+      <p>Cartel</p>
+    </div>
+  </div>
+  <div class="link">
+    <div class="link-image">
+      <a href="http://migala.mx/recursos/pared/helioSantos/catalogo.pdf" target="_blank"><img src="http://migala.mx/recursos/pared/manuelaGRomo/link2.png" alt=""></a>
+    </div>
+    <div class="link-info">
+      <p>Catálogo</p>
+    </div>
+  </div>
+  <div class="link">
+    <div class="link-image">
+      <a href="https://heliosantos.org" target="_blank"><img src="http://migala.mx/recursos/pared/helioSantos/link3.gif" alt=""></a>
+    </div>
+    <div class="link-info">
+      <p>Web Helio Santos</p>
+    </div>
+  </div>
+</div>
+<h1 class="expo-title es">Reconocimientos</h1>
+<h1 class="expo-title en">Acknowledges</h1>
+<p class="expo-description">Translations/traducción // Text review/revisión de textos<br>Gala Anaya Vázquez, Beatriz Marrodán</p>
+<p class="expo-description">Social Media / Redes <br> Fernando Victoria</p>

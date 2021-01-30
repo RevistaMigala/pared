@@ -18,11 +18,12 @@ const router = new express.Router()
 const copies = require('../copies')
 
 router.get('/', async (req, res) => {
-    const texts = await CasapropiaRecord.find()
+    const { generateTitle } = require('../utils/helio_utils')
     const values = {
-        texts: texts.reverse(),
-        ...copies.indexValues(req.query.lang),
+        ...generateTitle(),
+        ...copies.helioSantosValues(req.query.lang),
     }
+
     res.render('index', values)
 })
 
@@ -202,6 +203,16 @@ router.get('/expos/manuelagromo', validateLang, async (req, res) => {
         ...copies.manuelaGRomoValues(req.query.lang),
     }
     res.render('manuelaGRomo', values)
+})
+
+router.get('/expos/heliosantos', validateLang, async (req, res) => {
+    const { generateTitle } = require('../utils/helio_utils')
+    const values = {
+        ...generateTitle(),
+        ...copies.helioSantosValues(req.query.lang),
+    }
+
+    res.render('heliosantos', values)
 })
 
 router.get('*', (req, res) => {
