@@ -74,13 +74,6 @@ module.exports.en = {
 }
 
 module.exports.fr = {
-    titles: {
-        1: '19th century paintings',
-        2: 'Computer vision',
-        3: 'Reconfiguration',
-        4: 'GLSL',
-        5: 'Final landscapes',
-    },
     images: imagesFr,
     expoDescription: statementFr,
     username: 'Nom',
