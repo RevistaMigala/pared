@@ -8,6 +8,7 @@ class Viewport {
         this.arrows = Array.from(this.slider.querySelectorAll('.arrow'))
         this.imageIds = this.bullets.map((bullet) => bullet.id)
         this.img = this.viewport.querySelector('#viewport-image')
+        this.link = this.viewport.querySelector('a')
         this.imageIndex = 0
         this.arrows.forEach((arrow, i) => {
             arrow.addEventListener('click', (event) => {
@@ -18,7 +19,9 @@ class Viewport {
 
     setDefaultImage () {
         this.visibleId = this.imageIds[this.imageIndex]
-        this.img.src = this.imageUrl.replace('$id', this.visibleId)
+        const url = this.imageUrl.replace('$id', this.visibleId)
+        this.img.src = url
+        this.link.href = url
         this.highlightBullet()
     }
 
@@ -30,7 +33,9 @@ class Viewport {
         }
 
         this.imageIndex += addend
-        this.img.src = this.imageUrl.replace('$id', this.imageIds[this.imageIndex])
+        const url = this.imageUrl.replace('$id', this.imageIds[this.imageIndex])
+        this.img.src = url
+        this.link.href = url
         this.highlightBullet()
     }
 
