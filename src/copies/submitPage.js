@@ -64,10 +64,10 @@ const fr = {
 const LANGUAGES = { es, en, fr }
 
 module.exports = (language) => {
-  const lang = LANGUAGES[language]
-  if (!lang) {
-      return es
-  }
+    const lang = LANGUAGES[language]
+    if (!lang) {
+        return es
+    }
 
-  return lang
+    return lang
 }
