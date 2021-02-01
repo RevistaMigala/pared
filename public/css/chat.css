@@ -1,9 +1,7 @@
 .chat {
   font-family: 'Alegreya Sans', sans-serif;
   position: relative;
-  margin-top: 1.6em;
-  margin-left: 10vw;
-  margin-bottom: 3em;
+  margin: 1.6rem auto 3rem;
   text-align: justify;
   height: 30vh;
   min-height: 100px;

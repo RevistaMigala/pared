@@ -38,6 +38,7 @@ body {
 .expo-title.en {
   text-align: right;
   color: var(--gris);
+  transform: translateX(-30%);
 }
 
 .expo-author, .expo-city {
@@ -112,14 +113,13 @@ body {
 }
 
 .videoconference {
-  width: 70%;
-  margin-left: 10vw;
-  text-align: left;
+  width: 70vw;
+  margin: 3rem auto;
 }
 
 .videoconference > iframe {
   width: 100%;
   min-width: 300px;
-  height: 30vw;
+  height: 40vh;
   min-height: 200px;
 }

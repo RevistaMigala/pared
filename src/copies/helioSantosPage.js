@@ -4,29 +4,34 @@ const {
   en: enGlobals,
   fr: frGlobals
 } = require('./globals')
+const {
+  es: esExpo,
+  en: enExpo,
+  fr: frExpo
+} = require('./partials/expoHelioSantos')
 
 const es = {
     ...esGlobals,
-    title: 'Expos',
+    ...esExpo,
 }
 
 const en = {
     ...enGlobals,
-    title: 'Expos',
+    ...enExpo,
 }
 
 const fr = {
     ...frGlobals,
-    title: 'Expos',
+    ...frExpo,
 }
 
 const LANGUAGES = { es, en, fr }
 
 module.exports = (language) => {
-    const lang = LANGUAGES[language]
-    if (!lang) {
-        return es
-    }
+  const lang = LANGUAGES[language]
+  if (!lang) {
+      return es
+  }
 
-    return lang
+  return lang
 }

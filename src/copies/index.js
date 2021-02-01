@@ -15,6 +15,7 @@ const circeIrasemaValues = require('./circeIrasemaPage')
 const manuelaGRomoValues = require('./manuelaGRomoPage')
 const casapropiaValues = require('./casapropiaPage')
 const casapropiaValuesError = require('./casapropiaPageError')
+const helioSantosValues = require('./helioSantosPage')
 
 module.exports = {
     indexValues,
@@ -33,5 +34,6 @@ module.exports = {
     manuelaGRomoValues,
     casapropiaValues,
     casapropiaValuesError,
+    helioSantosValues,
     errorValues,
 }
