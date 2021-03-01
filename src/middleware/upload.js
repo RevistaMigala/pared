@@ -2,7 +2,7 @@ const multer = require('multer')
 
 const upload = multer({
     limits: {
-        fileSize: 5000000,
+        fileSize: 10000000,
     },
     fileFilter: (req, file, cb) => {
         if (!file.originalname.match(/\.(png|jpg|jpeg)$/)) {
@@ -23,4 +23,9 @@ const imageGallery = upload.fields([
     { name: 'image_8' },
 ])
 
-module.exports = { upload, imageGallery}
+const imageWithThumb = upload.fields([
+    { name: 'image' },
+    { name: 'thumb' },
+])
+
+module.exports = { upload, imageGallery, imageWithThumb }
