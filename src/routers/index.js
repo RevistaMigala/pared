@@ -2,11 +2,12 @@ const fs = require('fs')
 const path = require('path')
 const express = require('express')
 const Auth = require('../middleware/auth')
-const { upload, imageGallery } = require('../middleware/upload')
+const { upload, imageGallery, imageWithThumb } = require('../middleware/upload')
 const validateLang = require('../middleware/validateLang')
 const Submit = require('../models/submit')
 const Message = require('../models/message')
 const CasapropiaRecord = require('../models/casapropiarecord')
+const Image = require('../models/image')
 const { TwitterClient } = require('../utils/twitter_client')
 const FtpClient = require('../utils/ftp_client')
 const { sanitizeMessage, sanitizeWebSafe } = require('../utils/sanitizer')
@@ -18,8 +19,7 @@ const router = new express.Router()
 const copies = require('../copies')
 
 router.get('/', async (req, res) => {
-    const { getImages } = require('../utils/gabriel_utils')
-    const images = getImages()
+    const images = await Image.find({'serie_name': 'gabrielCarrillo'})
     const values = { images, ...copies.gabrielCarrilloValues(req.query.lang) }
     res.render('gabrielCarrillo', values)
 })
@@ -117,6 +117,10 @@ router.get('/casapropia', Auth.authorizer(), validateLang, async (req, res) => {
     res.render('casapropia', values)
 })
 
+router.get('/imageadmin', Auth.authorizer(), validateLang, async (req, res) => {
+    res.render('imageadmin', copies.casapropiaValues(req.query.lang))
+})
+
 router.get('/services/casapropia', validateLang, async (req, res) => {
     try {
         const images = await CasapropiaRecord.find()
@@ -142,12 +146,42 @@ router.post('/services/casapropia', upload.single('image'), async (req, res) => 
         const record = new CasapropiaRecord(payload)
         await record.save()
         await ftp.uploadFile(imageFile, imageName)
-
+        ftp.close()
         res.redirect('/casapropia')
     } catch(error) {
         console.error(error)
 
         res.render('casapropia', copies.casapropiaValuesError(req.query.lang))
+    }
+})
+
+router.post('/services/images', imageWithThumb, async (req, res) => {
+    try {
+        const ftp = new FtpClient()
+        const [ image ] = req.files.image
+        const [ thumb ] = req.files.thumb
+        const { serie_name, creator_name } = req.body
+        const imageFile = bufferToStream(image.buffer)
+        const imageName = sanitizeWebSafe(image.originalname)
+        const thumbFile = bufferToStream(thumb.buffer)
+        const thumbName = 'thumb_' + imageName
+        const payload = {
+            serie_name,
+            creator_name,
+            image_url: `${process.env.HOST_HTTP_URL}/${serie_name}/${imageName}`,
+            thumb_url: `${process.env.HOST_HTTP_URL}/${serie_name}/${thumbName}`,
+        }
+        const record = new Image(payload)
+        await record.save()
+        const baseUrl = `${process.env.FTP_URL}/${serie_name}`
+        await ftp.uploadFile(imageFile, imageName, { baseUrl })
+        await ftp.uploadFile(thumbFile, thumbName, { baseUrl })
+        ftp.close()
+        res.redirect('/imageadmin')
+    } catch(error) {
+        console.error(error)
+
+        res.render('imageadmin', copies.casapropiaValuesError(req.query.lang))
     }
 })
 
@@ -213,8 +247,7 @@ router.get('/expos/heliosantos', validateLang, async (req, res) => {
 })
 
 router.get('/expos/gabrielcarrillo', validateLang, async (req, res) => {
-    const { getImages } = require('../utils/gabriel_utils')
-    const images = getImages()
+    const images = Image.find({'serie_name': 'gabrielCarrillo'})
     const values = { images, ...copies.gabrielCarrilloValues(req.query.lang) }
     res.render('gabrielCarrillo', values)
 })

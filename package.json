@@ -23,7 +23,7 @@
   },
   "scripts": {
     "test": "exit 0",
-    "start_db": "chmod 755 ./local-db/start-db.sh && ./local-db/start-db.sh",
+    "db": "chmod 755 ./local-db/start-db.sh && ./local-db/start-db.sh",
     "dev": "env-cmd -f ./config/env.local nodemon src/app.js -e js,hbs",
     "start": "node src/app.js",
     "deploy:prod": "git push heroku master"

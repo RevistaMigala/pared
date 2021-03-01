@@ -15,16 +15,19 @@ class FtpClient {
         })
     }
 
-    async uploadFile (fileBuffer, fileName) {
+    async uploadFile (fileBuffer, fileName, options) {
+        const baseUrl = (options.baseUrl) ? options.baseUrl : this.baseUrl
         try {
-            const destination = `${this.baseUrl}/${fileName}`
+            const destination = `${baseUrl}/${fileName}`
             await this.access
             await this.client.uploadFrom(fileBuffer, destination)
         } catch (error) {
             console.log(error)
-        } finally {
-            this.client.close()
         }
+    }
+
+    close () {
+        this.client.close()
     }
 }
 
