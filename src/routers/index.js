@@ -18,43 +18,8 @@ const router = new express.Router()
 const copies = require('../copies')
 
 router.get('/', async (req, res) => {
-    const images = [
-        {
-            author: 'Gabriel Carrillo de Icaza',
-            url: 'http://migala.mx/recursos/pared/gabrielCarrillo/1.jpeg',
-            thumb: 'http://migala.mx/recursos/pared/gabrielCarrillo/1thumb.jpg',
-        },
-        {
-            author: 'Gabriel Carrillo de Icaza',
-            url: 'http://migala.mx/recursos/pared/gabrielCarrillo/2.jpeg',
-            thumb: 'http://migala.mx/recursos/pared/gabrielCarrillo/2thumb.jpg',
-        },
-        {
-            author: 'Gabriel Carrillo de Icaza',
-            url: 'http://migala.mx/recursos/pared/gabrielCarrillo/3.jpeg',
-            thumb: 'http://migala.mx/recursos/pared/gabrielCarrillo/3thumb.jpg',
-        },
-        {
-            author: 'Gabriel Carrillo de Icaza',
-            url: 'http://migala.mx/recursos/pared/gabrielCarrillo/4.jpeg',
-            thumb: 'http://migala.mx/recursos/pared/gabrielCarrillo/4thumb.jpg',
-        },
-        {
-            author: 'Gabriel Carrillo de Icaza',
-            url: 'http://migala.mx/recursos/pared/gabrielCarrillo/5.jpeg',
-            thumb: 'http://migala.mx/recursos/pared/gabrielCarrillo/5thumb.jpg',
-        },
-        {
-            author: 'Gabriel Carrillo de Icaza',
-            url: 'http://migala.mx/recursos/pared/gabrielCarrillo/6.jpeg',
-            thumb: 'http://migala.mx/recursos/pared/gabrielCarrillo/6thumb.jpg',
-        },
-        {
-            author: 'Gabriel Carrillo de Icaza',
-            url: 'http://migala.mx/recursos/pared/gabrielCarrillo/7.jpeg',
-            thumb: 'http://migala.mx/recursos/pared/gabrielCarrillo/7thumb.jpg',
-        },
-    ]
+    const { getImages } = require('../utils/gabriel_utils')
+    const images = getImages()
     const values = { images, ...copies.gabrielCarrilloValues(req.query.lang) }
     res.render('gabrielCarrillo', values)
 })
@@ -248,36 +213,8 @@ router.get('/expos/heliosantos', validateLang, async (req, res) => {
 })
 
 router.get('/expos/gabrielcarrillo', validateLang, async (req, res) => {
-    const images = [
-        {
-            author: 'Gabriel Carrillo de Icaza',
-            url: 'http://migala.mx/recursos/pared/gabrielCarrillo/1.jpeg',
-        },
-        {
-            author: 'Gabriel Carrillo de Icaza',
-            url: 'http://migala.mx/recursos/pared/gabrielCarrillo/2.jpeg',
-        },
-        {
-            author: 'Gabriel Carrillo de Icaza',
-            url: 'http://migala.mx/recursos/pared/gabrielCarrillo/3.jpeg',
-        },
-        {
-            author: 'Gabriel Carrillo de Icaza',
-            url: 'http://migala.mx/recursos/pared/gabrielCarrillo/4.jpeg',
-        },
-        {
-            author: 'Gabriel Carrillo de Icaza',
-            url: 'http://migala.mx/recursos/pared/gabrielCarrillo/5.jpeg',
-        },
-        {
-            author: 'Gabriel Carrillo de Icaza',
-            url: 'http://migala.mx/recursos/pared/gabrielCarrillo/6.jpeg',
-        },
-        {
-            author: 'Gabriel Carrillo de Icaza',
-            url: 'http://migala.mx/recursos/pared/gabrielCarrillo/7.jpeg',
-        },
-    ]
+    const { getImages } = require('../utils/gabriel_utils')
+    const images = getImages()
     const values = { images, ...copies.gabrielCarrilloValues(req.query.lang) }
     res.render('gabrielCarrillo', values)
 })
