@@ -18,13 +18,10 @@ const router = new express.Router()
 const copies = require('../copies')
 
 router.get('/', async (req, res) => {
-    const { generateTitle } = require('../utils/helio_utils')
-    const values = {
-        ...generateTitle(),
-        ...copies.helioSantosValues(req.query.lang),
-    }
-
-    res.render('index', values)
+    const { getImages } = require('../utils/gabriel_utils')
+    const images = getImages()
+    const values = { images, ...copies.gabrielCarrilloValues(req.query.lang) }
+    res.render('gabrielCarrillo', values)
 })
 
 router.post('/message', async (req, res) => {
@@ -212,7 +209,14 @@ router.get('/expos/heliosantos', validateLang, async (req, res) => {
         ...copies.helioSantosValues(req.query.lang),
     }
 
-    res.render('heliosantos', values)
+    res.render('helioSantos', values)
+})
+
+router.get('/expos/gabrielcarrillo', validateLang, async (req, res) => {
+    const { getImages } = require('../utils/gabriel_utils')
+    const images = getImages()
+    const values = { images, ...copies.gabrielCarrilloValues(req.query.lang) }
+    res.render('gabrielCarrillo', values)
 })
 
 router.get('*', (req, res) => {
