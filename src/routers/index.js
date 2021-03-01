@@ -237,7 +237,7 @@ router.get('/expos/manuelagromo', validateLang, async (req, res) => {
     res.render('manuelaGRomo', values)
 })
 
-router.get('/expos/heliosantos', validateLang, async (req, res) => {
+router.get('/expos/helioSantos', validateLang, async (req, res) => {
     const { generateTitle } = require('../utils/helio_utils')
     const values = {
         ...generateTitle(),
@@ -247,7 +247,7 @@ router.get('/expos/heliosantos', validateLang, async (req, res) => {
     res.render('heliosantos', values)
 })
 
-router.get('/expos/gabrielcarrillo', validateLang, async (req, res) => {
+router.get('/expos/gabrielCarrillo', validateLang, async (req, res) => {
     const images = [
         {
             author: 'Gabriel Carrillo de Icaza',
