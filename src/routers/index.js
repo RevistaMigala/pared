@@ -247,7 +247,7 @@ router.get('/expos/heliosantos', validateLang, async (req, res) => {
 })
 
 router.get('/expos/gabrielcarrillo', validateLang, async (req, res) => {
-    const images = Image.find({'serie_name': 'gabrielCarrillo'})
+    const images = await Image.find({'serie_name': 'gabrielCarrillo'})
     const values = { images, ...copies.gabrielCarrilloValues(req.query.lang) }
     res.render('gabrielCarrillo', values)
 })
