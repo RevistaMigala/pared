@@ -11,7 +11,7 @@
         {{>header}}
         <p class="description">{{description}}</p>
         <p class="error">{{error}}</p>
-        <form class="submit" action="/submit?lang={{langDefault}}" method="post" enctype="multipart/form-data">
+        <form class="submit" action="/submit" method="post" enctype="multipart/form-data">
             <p>{{required}}</p>
             <input type="text" name="artist_name" placeholder="{{artist_name}}" required>
             <input type="text" name="project_name" placeholder="{{project_name}}" required>

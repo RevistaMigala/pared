@@ -74,7 +74,7 @@ router.get('/submit', (req, res) => {
     res.render('submit', copies.submitValues(req.query.lang))
 })
 
-router.post('/submit', async (req, res) => {
+router.post('/submit', upload.none(), async (req, res) => {
     try {
         const submit = new Submit(req.body)
         await submit.save()
