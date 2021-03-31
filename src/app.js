@@ -5,6 +5,8 @@ const socketio = require('socket.io')
 const hbs = require('hbs')
 const bodyParser = require('body-parser')
 const router = require('./routers')
+const { sanitizeMessageText } = require('./utils/sanitizer')
+
 
 const app = express()
 const server = http.createServer(app)
@@ -17,7 +19,8 @@ const io = socketio(server)
 
 io.on('connection', (socket) => {
     socket.on('increment', (message) => {
-        io.emit('broadcast', message)
+        const sanitizedMessage = sanitizeMessageText(message)
+        io.emit('broadcast', sanitizedMessage)
     })
 })
 

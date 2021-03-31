@@ -1,4 +1,11 @@
-module.exports.sanitizeMessage = ({ username, message, expo }) => {
+const sanitizeMessageText = (message) => {
+    return message .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt')
+            .replace(/script/g, 'escript')
+            .replace(/\//g, '|')
+}
+
+const sanitizeMessage = ({ username, message, expo }) => {
     const validExpos = [
         'LinaVelasquez',
         'SergioSuarez',
@@ -7,28 +14,21 @@ module.exports.sanitizeMessage = ({ username, message, expo }) => {
         'CirceIrasema',
         'ManuelaGRomo',
         'HelioSantos',
-        'GabrielCarrillo'
+        'GabrielCarrillo',
+        'JavierFuentes'
     ]
     if (!validExpos.includes(expo)) {
         console.log('Expo not valid', expo)
         return
     }
     return {
-        username: username
-            .replace(/</g, '&lt;')
-            .replace(/>/g, '&gt')
-            .replace(/script/g, 'escript')
-            .replace(/\//g, '|'),
-        message: message
-            .replace(/</g, '&lt;')
-            .replace(/>/g, '&gt')
-            .replace(/script/g, 'escript')
-            .replace(/\//g, '|'),
+        username: sanitizeMessageText(username),
+        message: sanitizeMessageText(message),
         expo,
     }
 }
 
-module.exports.sanitizeWebSafe = (text) => {
+const sanitizeWebSafe = (text) => {
     return text
         .toLowerCase()
         .replace(/[\+\s?]/g, '')
@@ -45,4 +45,10 @@ module.exports.sanitizeWebSafe = (text) => {
         .replace(/ñ/g, 'n')
         .replace(/Ñ/g, 'N')
 
+}
+
+module.exports = {
+    sanitizeMessage,
+    sanitizeWebSafe,
+    sanitizeMessageText,
 }

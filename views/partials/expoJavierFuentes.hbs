@@ -1,0 +1,143 @@
+<link rel="stylesheet" href="/css/expoJavierFuentes.css">
+<input id="expoName" type="text" value="JavierFuentes" style="display: none;">
+<script type="text/javascript" src="/assets/expoGabrielCarrillo/main.js">
+
+</script>
+<div class="title-group">
+  <h1 class="expo-title es">{{expoTitle}}</h1>
+  <h1 class="expo-title en">{{expoTitle}}</h1>
+</div>
+
+<p class="expo-author">Javier Fuentes</p>
+<p class="expo-city">Ciudad de México</p>
+<p class="expo-description">{{expoDescription}}</p>
+
+<h1 class="expo-title es">Inauguración</h1>
+<h1 class="expo-title en">Opening</h1>
+<div class="videoconference">
+  <iframe width="560" height="560" src="https://www.youtube.com/embed/PxZ8r8Gkfto" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+{{>chat}}
+
+<h1 class="expo-title es">Obras</h1>
+<h1 class="expo-title en">Works</h1>
+
+<div class="landscape-1-container">
+  <a href="http://migala.mx/recursos/pared/javierFuentes/ag1.gif" target="_blank">
+    <img src="http://migala.mx/recursos/pared/javierFuentes/ag1.gif" alt="">
+  </a>
+  <a href="http://migala.mx/recursos/pared/gabrielCarrillo/numeralesV.zip" target="_blank">
+    <div class="download-container">Sube tu intervención. Haz clic aquí para probar el filtro en Instagram.</div>
+  </a>
+  <div class="info-container">
+    <p class="info-container">Adrián González</br>
+Técnica: Animación digital</br>
+Año: 2021
+      </p>
+  </div>
+</div>
+
+
+<div class="landscape-1-container">
+  <a href="http://migala.mx/recursos/pared/javierFuentes/jf1.gif" target="_blank">
+    <img src="http://migala.mx/recursos/pared/javierFuentes/jf1.gif" alt="">
+  </a>
+  <a href="http://migala.mx/recursos/pared/gabrielCarrillo/numeralesV.zip" target="_blank">
+    <div class="download-container">Sube tu intervención. Haz clic aquí para probar el filtro en Instagram.</div>
+  </a>
+  <div class="info-container">
+    <p class="info-container">Javier Fuentes</br>
+Técnica: Animación digital</br>
+Año: 2021
+      </p>
+  </div>
+</div>
+
+<div class="landscape-1-container">
+  <a href="http://migala.mx/recursos/pared/javierFuentes/jf2.gif" target="_blank">
+    <img src="http://migala.mx/recursos/pared/javierFuentes/jf2.gif" alt="">
+  </a>
+  <a href="http://migala.mx/recursos/pared/gabrielCarrillo/numeralesV.zip" target="_blank">
+    <div class="download-container">Sube tu intervención. Haz clic aquí para probar el filtro en Instagram.</div>
+  </a>
+  <div class="info-container">
+    <p class="info-container">Javier Fuentes</br>
+Técnica: Animación digital</br>
+Año: 2021
+      </p>
+  </div>
+</div>
+
+<div class="landscape-1-container">
+  <a href="http://migala.mx/recursos/pared/javierFuentes/jf3.gif" target="_blank">
+    <img src="http://migala.mx/recursos/pared/javierFuentes/jf3.gif" alt="">
+  </a>
+  <a href="http://migala.mx/recursos/pared/gabrielCarrillo/numeralesV.zip" target="_blank">
+    <div class="download-container">Sube tu intervención. Haz clic aquí para probar el filtro en Instagram.</div>
+  </a>
+  <div class="info-container">
+    <p class="info-container">Javier Fuentes</br>
+Técnica: Animación digital</br>
+Año: 2021
+      </p>
+  </div>
+</div>
+
+<div class="landscape-1-container">
+  <a href="http://migala.mx/recursos/pared/javierFuentes/am1.gif" target="_blank">
+    <img src="http://migala.mx/recursos/pared/javierFuentes/am1.gif" alt="">
+  </a>
+  <a href="http://migala.mx/recursos/pared/gabrielCarrillo/numeralesV.zip" target="_blank">
+    <div class="download-container">Sube tu intervención. Haz clic aquí para probar el filtro en Instagram.</div>
+  </a>
+  <div class="info-container">
+    <p class="info-container">Andrea Mondragón</br>
+Técnica: Animación digital</br>
+Año: 2021
+      </p>
+  </div>
+</div>
+
+<h1 class="expo-title es">Intervenciones</h1>
+<h1 class="expo-title en">Intervenciones</h1>
+
+<p class="expo-description">¿Quieres subir tu intervención del mundo con alguno de los filtros? Úsalo y envíanos las capturas a david@migala.mx para que sean añadidas en la galería.</p>
+
+<div class="interventions-container">
+  {{# each images}}
+    <div class="intervention">
+      <a href="{{this.image_url}}" target="_blank">
+        <img src="{{this.thumb_url}}" alt="">
+      </a>
+      <p>{{this.creator_name}}</p>
+    </div>
+  {{/each}}
+</div>
+
+<h1 class="expo-title es">Enlaces</h1>
+<h1 class="expo-title en">Links</h1>
+
+<div class="links" >
+  <div class="link">
+    <div class="link-image">
+      <a href="http://www.migala.mx/recursos/pared/javierFuentes/invitacion.png" target="_blank">
+        <img src="http://www.migala.mx/recursos/pared/javierFuentes/invitacion.png" alt="">
+      </a>
+    </div>
+    <div class="link-info">
+      <p>Cartel</p>
+    </div>
+  </div>
+  <div class="link">
+    <div class="link-image">
+      <a href="http://migala.mx/recursos/pared/javierFuentes/catalogo.pdf" target="_blank"><img src="http://migala.mx/recursos/pared/javierFuentes/link1.png" alt=""></a>
+    </div>
+    <div class="link-info">
+      <p>Catálogo</p>
+    </div>
+  </div>
+</div>
+<h1 class="expo-title es">Reconocimientos</h1>
+<h1 class="expo-title en">Acknowledges</h1>
+<p class="expo-description">Translations/traducción // Text review/revisión de textos<br>Gala Anaya Vázquez, Beatriz Marrodán</p>
+<p class="expo-description">Social Media / Redes <br> Fernando Victoria</p>
