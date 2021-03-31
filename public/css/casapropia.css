@@ -24,3 +24,8 @@
 .select {
     display: none;
 }
+
+form > select {
+    text-align: left;
+    display: inherit;
+}

@@ -14,9 +14,12 @@ const linaVelasquezValues = require('./linaVelasquezPage')
 const circeIrasemaValues = require('./circeIrasemaPage')
 const manuelaGRomoValues = require('./manuelaGRomoPage')
 const casapropiaValues = require('./casapropiaPage')
+const imageadminValues = require('./imageadminPage')
 const casapropiaValuesError = require('./casapropiaPageError')
+const imageadminValuesError = require('./imageadminPageError')
 const helioSantosValues = require('./helioSantosPage')
 const gabrielCarrilloValues = require('./gabrielCarrilloPage')
+const javierFuentesValues = require('./javierFuentesPage')
 
 module.exports = {
     indexValues,
@@ -38,4 +41,7 @@ module.exports = {
     helioSantosValues,
     errorValues,
     gabrielCarrilloValues,
+    imageadminValues,
+    imageadminValuesError,
+    javierFuentesValues,
 }

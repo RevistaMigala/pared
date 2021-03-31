@@ -19,9 +19,9 @@ const router = new express.Router()
 const copies = require('../copies')
 
 router.get('/', async (req, res) => {
-    const images = await Image.find({'serie_name': 'gabrielCarrillo'})
-    const values = { images, ...copies.gabrielCarrilloValues(req.query.lang) }
-    res.render('gabrielCarrillo', values)
+    const images = await Image.find({'serie_name': 'javierFuentes'})
+    const values = { images, ...copies.javierFuentesValues(req.query.lang) }
+    res.render('javierFuentes', values)
 })
 
 router.post('/message', async (req, res) => {
@@ -118,7 +118,7 @@ router.get('/casapropia', Auth.authorizer(), validateLang, async (req, res) => {
 })
 
 router.get('/imageadmin', Auth.authorizer(), validateLang, async (req, res) => {
-    res.render('imageadmin', copies.casapropiaValues(req.query.lang))
+    res.render('imageadmin', copies.imageadminValues(req.query.lang))
 })
 
 router.get('/services/casapropia', validateLang, async (req, res) => {
@@ -181,7 +181,7 @@ router.post('/services/images', imageWithThumb, async (req, res) => {
     } catch(error) {
         console.error(error)
 
-        res.render('imageadmin', copies.casapropiaValuesError(req.query.lang))
+        res.render('imageadmin', copies.imageadminValuesError(req.query.lang))
     }
 })
 
