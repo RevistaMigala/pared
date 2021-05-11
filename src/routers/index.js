@@ -252,6 +252,12 @@ router.get('/expos/gabrielcarrillo', validateLang, async (req, res) => {
     res.render('gabrielCarrillo', values)
 })
 
+router.get('/expos/javierfuentes', validateLang, async (req, res) => {
+    const images = await Image.find({'serie_name': 'javierFuentes'})
+    const values = { images, ...copies.javierFuentesValues(req.query.lang) }
+    res.render('javierFuentes', values)
+})
+
 router.get('*', (req, res) => {
     res.render('404', copies.errorValues)
     console.log('Requested', req._parsedOriginalUrl.pathname)
