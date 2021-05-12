@@ -19,9 +19,8 @@ const router = new express.Router()
 const copies = require('../copies')
 
 router.get('/', async (req, res) => {
-    const images = await Image.find({'serie_name': 'javierFuentes'})
-    const values = { images, ...copies.javierFuentesValues(req.query.lang) }
-    res.render('javierFuentes', values)
+    const values = copies.juanPabloMedinaValues(req.query.lang)
+    res.render('juanPabloMedina', values)
 })
 
 router.post('/message', async (req, res) => {
@@ -253,9 +252,14 @@ router.get('/expos/gabrielcarrillo', validateLang, async (req, res) => {
 })
 
 router.get('/expos/javierfuentes', validateLang, async (req, res) => {
-    const images = await Image.find({'serie_name': 'javierFuentes'})
-    const values = { images, ...copies.javierFuentesValues(req.query.lang) }
-    res.render('javierFuentes', values)
+  const images = await Image.find({'serie_name': 'javierFuentes'})
+  const values = { images, ...copies.javierFuentesValues(req.query.lang) }
+  res.render('javierFuentes', values)
+})
+
+router.get('/expos/juanpablomedina', validateLang, async (req, res) => {
+  const values = copies.juanPabloMedinaValues(req.query.lang)
+  res.render('juanPabloMedina', values)
 })
 
 router.get('*', (req, res) => {

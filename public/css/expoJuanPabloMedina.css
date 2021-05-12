@@ -1,0 +1,149 @@
+.select {
+  top: 0;
+  right: 5%;
+}
+
+.title-group {
+  font-style: normal;
+  margin-top: 2em;
+}
+
+.expo-title {
+  margin: 0 0 0 10vw;
+  line-height: .8em;
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  width: 65%;
+  min-width: 300px;
+}
+
+.section-title {
+  text-align: left;
+  margin: 0 0 1rem 10vw;
+}
+
+.expo-title.es {
+  text-align: left;
+}
+
+.expo-title.en {
+  text-align: left;
+  color: var(--gris);
+  transform: translateX(30%);
+}
+
+.expo-author, .expo-city {
+  margin-top: 1.6em;
+  margin-left: 10vw;
+  margin-right: auto;
+  min-width: 300px;
+  width: 50%;
+  text-align: justify;
+  font-weight: bold;
+}
+
+.expo-description {
+  margin-top: 1.6em;
+  margin-left: 10vw;
+  margin-bottom: 3em;
+  text-align: justify;
+  width: 50%;
+  min-width: 300px;
+  white-space: pre-line;
+}
+
+.info-container {
+  margin: 1rem 0;
+  background-color: var(--azul);
+  min-width: 200px;
+  width: 40vw;
+}
+
+.info-container p {
+  color: white;
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: .8rem;
+  font-style: normal;
+  letter-spacing: 2px;
+  text-align: left;
+  margin: 0;
+  padding: .8rem;
+}
+
+.videoconference {
+  width: 80vw;
+  margin: 3rem auto;
+}
+
+.videoconference > iframe {
+  width: 100%;
+  min-height: 200px;
+}
+
+@media (orientation: portrait) {
+  body {
+    overflow-x: hidden;
+  }
+  .expo-description {
+    margin-top: 1.6em;
+    margin-left: 10vw;
+    margin-bottom: 3em;
+    text-align: justify;
+    width: 80%;
+    min-width: 300px;
+  }
+
+  .videoconference > iframe {
+    height: 30vh;
+  }
+}
+
+canvas {
+  outline: none;
+  user-select: none;
+}
+
+.model-container {
+  position: relative;
+}
+
+.image-modal-visible {
+  position: absolute;
+  z-index: 2;
+  width: 90vw;
+  height: 80vh;
+  max-height: 800px;
+  max-width: 800px;
+  left: 50%;
+  margin-left: -400px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+@media (max-width: 800px) {
+  .image-modal-visible {
+    margin-left: 5%;
+    left: auto;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.instructions {
+  background-color: var(--rosa);
+  width: 40%;
+  max-width: 90vw;
+  min-width: 300px;
+  padding: 0 1rem;
+  text-align: left;
+  font-style: normal;
+  color: white;
+  font-size: 90%;
+  font-family: 'Alegreya Sans', sans-serif;
+  margin-left: 5%;
+  margin-right: 5%;
+  white-space: pre-line;
+}

@@ -20,6 +20,7 @@ const imageadminValuesError = require('./imageadminPageError')
 const helioSantosValues = require('./helioSantosPage')
 const gabrielCarrilloValues = require('./gabrielCarrilloPage')
 const javierFuentesValues = require('./javierFuentesPage')
+const juanPabloMedinaValues = require('./juanPabloMedinaPage')
 
 module.exports = {
     indexValues,
@@ -44,4 +45,5 @@ module.exports = {
     imageadminValues,
     imageadminValuesError,
     javierFuentesValues,
+    juanPabloMedinaValues,
 }
