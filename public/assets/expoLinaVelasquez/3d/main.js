@@ -28,7 +28,7 @@
 
     function init() {
       const canvas = document.querySelector('#c');
-      const MODEL_PATH = '/assets/expoLinaVelasquez/3d/profundo-lite.glb'
+      const MODEL_PATH = '/assets/3dmodels/profundo-lite.glb'
       const backgroundColor = 0xf1f1f1;
 
       // Init the scene
@@ -191,8 +191,8 @@
         camera.aspect = canvas.clientWidth / canvas.clientHeight;
         camera.updateProjectionMatrix();
       }
-      renderer.render(scene, camera);
-      requestAnimationFrame(update);
+      renderer.render(scene, camera)
+      requestAnimationFrame(update)
     }
 
     function resizeRendererToDisplaySize(renderer) {
@@ -203,10 +203,10 @@
       let canvasPixelHeight = canvas.height / window.devicePixelRatio;
 
       const needResize =
-        canvasPixelWidth !== width || canvasPixelHeight !== height;
+        canvasPixelWidth !== width || canvasPixelHeight !== height
       if (needResize) {
-        renderer.setSize(width, height, false);
+        renderer.setSize(width, height, false)
       }
-      return needResize;
+      return needResize
     }
 })();
