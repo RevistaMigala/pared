@@ -44,7 +44,7 @@ module.exports.en = {
 
 module.exports.fr = {
     instructions: 'Haz clic en las imágenes para expandirlas o cerrarlas.\nPara mover el modelo, usa las flechas de tu teclado o haz clic presionando la tecla shift o desplázate haciendo clic con dos dedos.\nPara girar la cámara, usa tu mouse o desplázate haciendo clic con un dedo.',
-    expoTitle: 'The panorama is no longer available',
+    expoTitle: 'Le panorama n\'est plus disponible',
     expoDescription: statementFr,
     username: 'Nom',
     message: 'Message',

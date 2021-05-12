@@ -51,7 +51,7 @@ scene.add(light2)
 
 // Model
 let loader = new THREE.GLTFLoader()
-loader.load(`http://migala.mx/recursos/pared/alejandraAguilar/3dmodels/${defaultModel}-${currentDaytime}-1-0.glb`, handle_load);
+loader.load(`/assets/3dmodels/${defaultModel}-${currentDaytime}-1-0.glb`, handle_load);
 
 let mesh, mixer
 
@@ -68,7 +68,7 @@ controls.enabled = false
 
 // Change model
 function changeModel (model) {
-    const modelurl = `/assets/expoAlejandra/3dmodels/${model}-${currentDaytime}-1-0.glb`
+    const modelurl = `/assets/3dmodels/${model}-${currentDaytime}-1-0.glb`
     document.getElementById('model').innerHTML = model
     console.log(modelurl)
     scene.remove(mesh);
