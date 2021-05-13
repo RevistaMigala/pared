@@ -31,18 +31,18 @@ class Model {
     this.castVector
     this.raycaster
     this.planes = {}
-    this.modelPath = '/assets/3dmodels/elpanoramayanoestadisponible.glb'
+    this.modelPath = '/assets/3dmodels/elpanoramayanoestadisponible2.glb'
     this.texturePath = '/assets/3dmodels/textures/'
     this.imageModal = new ImageModal()
     this.canvas = document.querySelector('#c')
     this.backgroundColor = 0xffffff
-    this.images = Array.from(Array(15), (x = this.texturePath, i) => `${x}${i + 1}.jpg`)
+    this.images = Array.from(Array(20), (x = this.texturePath, i) => `${x}${i + 1}.jpg`)
     this.positions = [
       { x: .6, y: -5, z: -5 },
       { x: .4, y: -1, z: -9 },
       { x: .3, y: 4, z: -6 },
       { x: .3, y: -.1, z: -4 },
-      { x: .4, y: -2, z: -3 },
+      { x: .4, y: -2, z: -5 },
       { x: .2, y: -4.5, z: 2 },
       { x: -5.8, y: -2.7, z: 0 },
       { x: -14.8, y: .3, z: 0.2 },
@@ -53,6 +53,11 @@ class Model {
       { x: .5, y: 1, z: 4.5 },
       { x: .3, y: -1, z: 7 },
       { x: .4, y: -5, z: 6 },
+      { x: .2, y: -4, z: -1 },
+      { x: .3, y: -5, z: 9 },
+      { x: .4, y: -2.5, z: 4.5 },
+      { x: .5, y: 2.2, z: -3.1 },
+      { x: .6, y: 5, z: -1 },
     ]
   }
 
@@ -98,7 +103,9 @@ class Model {
       1000
     )
     this.camera.position.x = 90
-    this.camera.zoom = 3
+    const baseWidth = (window.innerWidth > 1200) ? 1200
+      : (window.innerWidth < 600) ? 600 : window.innerWidth
+    this.camera.zoom = 3 * baseWidth / 600
   }
 
   addLights () {
@@ -114,6 +121,7 @@ class Model {
     this.loader.load(this.modelPath, (gltf) => {
       this.model = gltf.scene
       this.model.scale.set(10, 10, 10)
+      this.model.position.set(0, -.5, 0)
       this.scene.add(this.model)
     })
   }
