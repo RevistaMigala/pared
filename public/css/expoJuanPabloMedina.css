@@ -96,6 +96,11 @@
   .videoconference > iframe {
     height: 30vh;
   }
+
+  .instructions {
+    width: 80vw !important;
+    min-width: unset !important;
+  }
 }
 
 canvas {
@@ -107,8 +112,12 @@ canvas {
   position: relative;
 }
 
+canvas:hover {
+  box-shadow: 0px 0 30px #eeeeee;
+}
+
 .image-modal-visible {
-  position: absolute;
+  position: fixed;
   z-index: 2;
   width: 90vw;
   height: 80vh;
@@ -119,6 +128,7 @@ canvas {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+  top: 10%;
 }
 
 @media (max-width: 800px) {
@@ -146,4 +156,40 @@ canvas {
   margin-left: 5%;
   margin-right: 5%;
   white-space: pre-line;
+}
+
+.additions-container {
+  margin-left: 5%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.addition {
+  height: 8em;
+  border-left: solid 2px var(--gris);
+  display: grid;
+  grid-gap: 5%;
+  grid-template-columns: minmax(100px, 1fr) minmax(200px, 1fr);
+  padding: 0 1em;
+}
+
+.addition:hover {
+  cursor: pointer;
+  border-left: solid 2px var(--rosa);
+}
+
+.addition img {
+  max-width: 100%;
+  max-height: 90%;
+  align-self: center;
+  justify-self: center;
+}
+
+.addition p {
+  align-self: center;
+  justify-self: center;
+  text-align: left;
+  font-family: 'Alegreya sans', sans-serif;
+  color: var(--gris);
+  font-style: normal;
 }
