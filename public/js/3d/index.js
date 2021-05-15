@@ -10,7 +10,7 @@ const vh = vw
 let scene,
     camera,
     renderer,
-    myCanvas = document.getElementById('canvas');
+    myCanvas = document.getElementById('canvas')
 
 // Renderer
 renderer = new THREE.WebGLRenderer({
@@ -33,25 +33,25 @@ scene = new THREE.Scene()
 let light = new THREE.AmbientLight(0xffffff, .95)
 let light2 = new THREE.AmbientLight(0x404040, .5)
 
-let spotLight = new THREE.SpotLight( 0xffffff );
-spotLight.position.set(0, 0, 10);
-scene.add(spotLight);
+let spotLight = new THREE.SpotLight( 0xffffff )
+spotLight.position.set(0, 0, 10)
+scene.add(spotLight)
 
 scene.add(light)
 
-let spotLight2 = new THREE.SpotLight( 0xffffff );
-spotLight.position.set(0, 10, 10);
-scene.add(spotLight2);
+let spotLight2 = new THREE.SpotLight( 0xffffff )
+spotLight.position.set(0, 10, 10)
+scene.add(spotLight2)
 
-let spotLight3 = new THREE.SpotLight( 0xffffff );
-spotLight.position.set(0, 5, 10);
-scene.add(spotLight3);
+let spotLight3 = new THREE.SpotLight( 0xffffff )
+spotLight.position.set(0, 5, 10)
+scene.add(spotLight3)
 
 scene.add(light2)
 
 // Model
-let loader = new THREE.GLTFLoader();
-loader.load(`/assets/expoAlejandra/3dmodels/${defaultModel}-${currentDaytime}-1-0.glb`, handle_load);
+let loader = new THREE.GLTFLoader()
+loader.load(`/assets/3dmodels/${defaultModel}-${currentDaytime}-1-0.glb`, handle_load);
 
 let mesh, mixer
 
@@ -68,7 +68,7 @@ controls.enabled = false
 
 // Change model
 function changeModel (model) {
-    const modelurl = `/assets/expoAlejandra/3dmodels/${model}-${currentDaytime}-1-0.glb`
+    const modelurl = `/assets/3dmodels/${model}-${currentDaytime}-1-0.glb`
     document.getElementById('model').innerHTML = model
     console.log(modelurl)
     scene.remove(mesh);

@@ -30,7 +30,6 @@ app.set('view engine', 'hbs')
 hbs.registerPartials(partialsPath)
 // Setup directory for static files
 app.use(express.static(public))
-
 app.use(bodyParser.json())
 app.use(router)
 
