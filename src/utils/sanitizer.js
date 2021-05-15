@@ -15,7 +15,8 @@ const sanitizeMessage = ({ username, message, expo }) => {
         'ManuelaGRomo',
         'HelioSantos',
         'GabrielCarrillo',
-        'JavierFuentes'
+        'JavierFuentes',
+        'JuanPabloMedina'
     ]
     if (!validExpos.includes(expo)) {
         console.log('Expo not valid', expo)
