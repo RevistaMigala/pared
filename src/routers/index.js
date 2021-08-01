@@ -19,8 +19,8 @@ const router = new express.Router()
 const copies = require('../copies')
 
 router.get('/', async (req, res) => {
-    const values = copies.juanPabloMedinaValues(req.query.lang)
-    res.render('juanPabloMedina', values)
+    const values = copies.indexValues(req.query.lang)
+    res.render('index', values)
 })
 
 router.post('/message', async (req, res) => {
@@ -260,6 +260,11 @@ router.get('/expos/javierfuentes', validateLang, async (req, res) => {
 router.get('/expos/juanpablomedina', validateLang, async (req, res) => {
   const values = copies.juanPabloMedinaValues(req.query.lang)
   res.render('juanPabloMedina', values)
+})
+
+router.get('/expos/danielBravo', validateLang, async (req, res) => {
+  const values = copies.danielBravoValues(req.query.lang)
+  res.render('danielBravo', values)
 })
 
 router.get('*', (req, res) => {
