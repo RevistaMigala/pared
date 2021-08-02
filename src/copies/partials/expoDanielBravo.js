@@ -20,7 +20,7 @@ const statementEn = statementEs
 const statementFr = statementEs
 
 module.exports.es = {
-    instructions: 'Haz clic en las imágenes. Luego haz clic en la flecha para recorrer la pieza.',
+    instructions: 'Esta pieza se plantea como un collage interactivo en el que cada uno de los elementos que integran el collage puede conducir a una postal que puede incluir una fotografía intervenida o un video. De esta forma, dando clic a la flecha de color rojo se puede acceder a una postal diferente de manera aleatoria, generando una narrativa distinta de acuerdo a los hipervínculos seleccionados.',
     expoTitle: 'Hueyotenco',
     expoDescription: statementEs,
     username: 'Nombre de usuario',
@@ -29,7 +29,7 @@ module.exports.es = {
 }
 
 module.exports.en = {
-    instructions: 'Haz clic en las imágenes. Luego haz clic en la flecha para recorrer la pieza.',
+    instructions: 'Esta pieza se plantea como un collage interactivo en el que cada uno de los elementos que integran el collage puede conducir a una postal que puede incluir una fotografía intervenida o un video. De esta forma, dando clic a la flecha de color rojo se puede acceder a una postal diferente de manera aleatoria, generando una narrativa distinta de acuerdo a los hipervínculos seleccionados.',
     expoTitle: 'Hueyotenco',
     expoDescription: statementEn,
     username: 'User name',
@@ -38,7 +38,7 @@ module.exports.en = {
 }
 
 module.exports.fr = {
-    instructions: 'Haz clic en las imágenes. Luego haz clic en la flecha para recorrer la pieza.',
+    instructions: 'Esta pieza se plantea como un collage interactivo en el que cada uno de los elementos que integran el collage puede conducir a una postal que puede incluir una fotografía intervenida o un video. De esta forma, dando clic a la flecha de color rojo se puede acceder a una postal diferente de manera aleatoria, generando una narrativa distinta de acuerdo a los hipervínculos seleccionados.',
     expoTitle: 'Hueyotenco',
     expoDescription: statementFr,
     username: 'Nom',
