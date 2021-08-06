@@ -168,8 +168,8 @@ class Model {
       : [ event.clientX, event.clientY ]
     const canvasCenter = (window.innerHeight - bottom - y)
     const relativeY = clientY + (canvasCenter / 2)
-    context.castVector.x = ((clientX / window.innerWidth) * 2 - 1) * 1.25
-    context.castVector.y = ((relativeY / window.innerHeight) * 2 - 1) * -1.25
+    context.castVector.x = ((clientX / window.innerWidth) * 2 - 1) * 1
+    context.castVector.y = ((relativeY / window.innerHeight) * 2 - 1) * -1
     context.raycaster.setFromCamera(context.castVector, this.camera)
 
     // Handle interactions
