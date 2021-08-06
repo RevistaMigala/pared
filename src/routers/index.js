@@ -262,6 +262,11 @@ router.get('/expos/juanpablomedina', validateLang, async (req, res) => {
   res.render('juanPabloMedina', values)
 })
 
+router.get('/expos/elfin', validateLang, async (req, res) => {
+  const values = copies.juanPabloMedinaValues(req.query.lang)
+  res.render('juanPabloMedinaAtlanta', values)
+})
+
 router.get('/expos/danielBravo', validateLang, async (req, res) => {
   const values = copies.danielBravoValues(req.query.lang)
   res.render('danielBravo', values)
