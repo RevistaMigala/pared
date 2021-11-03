@@ -15,7 +15,7 @@
     "request": "^2.88.0",
     "socket.io": "^2.3.0",
     "twitter-lite": "^0.13.0",
-    "validator": "^13.0.0"
+    "validator": "^13.7.0"
   },
   "devDependencies": {
     "env-cmd": "^10.1.0",
